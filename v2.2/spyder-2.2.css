@@ -1,0 +1,620 @@
+/*
+ *  SPYDER 2.2 
+ *  A bare bones grid system designed for the in-house team at 2600Hz
+ *	Last Updated: 6.15
+ *  -------------------------------------------------------
+ *
+ *  License
+ *  -------------------------------------------------------
+ *  - SPYDER is licensed under the MIT License - http://opensource.org/licenses/mit-license.html
+ *  - SPYDER is licensed under the CC BY 3.0 License - http://creativecommons.org/licenses/by/3.0/
+ *  - Attribution is NOT required in your designs. However, this comment content must NOT be removed.
+ *
+ *  Contact
+ *  -------------------------------------------------------
+ *  Email: joshsandersdesign@gmail.com
+ *  Work: Design Director at 2600hz
+ */
+
+
+/*
+======================================================= 
+Basic Foundation
+======================================================= 
+*/
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html {
+	-ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+a {
+    text-decoration: none;
+}
+button {
+    overflow: visible;
+    border: 0;
+    font: inherit;
+    -webkit-font-smoothing: inherit;
+    letter-spacing: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+:focus {
+    outline: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*
+======================================================= 
+SYPDER Structural 
+======================================================= 
+*/
+/* 
+It may be better to set .content-wrap in either the root style.css of the project,
+or in each media-query breakpoint below (may offer more control),
+as the container width may change depending on the project needs [v3 perhaps]
+*/
+.row,
+.next-row {
+	width: 100%;
+}
+.row img {
+	max-width: 100%;
+}
+.row::before,
+.row::after,
+.next-row::before,
+.next-row::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+.row::after,
+.next-row::after {
+	clear: both;
+}
+/*
+--------------------------------------
+sm-col breakpoint
+4 Column Grid
+--------------------------------------
+*/
+@media screen and (max-width: 47.9375rem) {
+/*@media screen and (max-width: 767px) {*/
+
+[class^="sm-col-"],
+[class*=" sm-col-"] {
+	display: inline-block;
+	vertical-align: top;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0% .8%;
+	float: left;
+}
+/*********** utilities **********/
+.gutter-add--left {
+	padding-left: .8%;
+}
+.gutter-add--right {
+	padding-right: .8%;
+}
+.sm-no-gutter--left {
+	padding-left: 0;
+}
+.sm-no-gutter--right {
+	padding-right: 0;
+}
+.sm-hide {
+	display: none;
+}
+/*********** columns **********/
+.sm-col-1 {
+	width: 25%;
+}
+.sm-offset-1 {
+	margin-left: 25%;
+}
+.sm-push-1 {
+	position: relative;
+	left: 25%; 
+	right: auto;
+}
+.sm-pull-1 {
+	position: relative;
+	right: 25%; 
+	left: auto;
+}
+.sm-col-2 {
+	width: 50%;
+}
+.sm-offset-2 {
+	margin-left: 50%;
+}
+.sm-push-2 {
+	position: relative;
+	left: 50%;
+	right: auto; 
+}
+.sm-pull-2 {
+	position: relative;
+	right: 50%;
+	left: auto; 
+}
+.sm-col-3 {
+	width: 75%;
+}
+.sm-offset-3 {
+	margin-left: 75%;
+}
+.sm-push-3 {
+	position: relative;
+	left: 75%; 
+	right: auto;
+}
+.sm-pull-3 {
+	position: relative;
+	right: 75%; 
+	left: auto;
+}
+.sm-col-4 {
+	width: 100%;
+}
+.sm-push-4 {
+	position: relative;
+	left: 100%; 
+	right: auto;
+}
+.sm-pull-4 {
+	position: relative;
+	right: 100%; 
+	left: auto;
+}
+/* end sm-col breakpoint */
+}
+/*
+--------------------------------------
+md-col breakpoint
+8 Column Grid
+--------------------------------------
+*/
+@media screen and (min-width: 48rem) and (max-width: 68.6875rem) {
+/*@media screen and (min-width: 768px) and (max-width: 1100px) {*/
+
+[class^="md-col-"],
+[class*=" md-col-"] {
+	display: inline-block;
+	vertical-align: top;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0% .65%;
+	float: left;
+}
+/*********** utilities **********/
+.gutter-add--left {
+	padding-left: .65%;
+}
+.gutter-add--right {
+	padding-right: .65%;
+}
+.md-no-gutter--left {
+	padding-left: 0;
+}
+.md-no-gutter--right {
+	padding-right: 0;
+}
+.md-hide {
+	display: none;
+}
+/*********** columns **********/
+.md-col-1 {
+	width: 12.5%; 
+}
+.md-offset-1 {
+	margin-left: 12.5%; 
+}
+.md-push-1 {
+	position: relative;
+	left: 12.5%; 
+	right: auto;
+}
+.md-pull-1 {
+	position: relative;
+	right: 12.5%; 
+	left: auto;
+}
+.md-col-2 {
+	width: 25%;
+}
+.md-offset-2 {
+	margin-left: 25%; 
+}
+.md-push-2 {
+	position: relative;
+	left: 25%; 
+	right: auto;
+}
+.md-pull-2 {
+	position: relative;
+	right: 25%; 
+	left: auto;
+}
+.md-col-3 {
+	width: 37.5%;
+}
+.md-offset-3 {
+	margin-left: 37.5%; 
+}
+.md-push-3 {
+	position: relative;
+	left: 37.5%; 
+	right: auto;
+}
+.md-pull-3 {
+	position: relative;
+	right: 37.5%; 
+	left: auto;
+}
+.md-col-4 {
+	width: 50%;
+}
+.md-offset-4 {
+	margin-left: 50%; 
+}
+.md-push-4 {
+	position: relative;
+	left: 50%; 
+	right: auto;
+}
+.md-pull-4 {
+	position: relative;
+	right: 50%; 
+	left: auto;
+}
+.md-col-5 {
+	width: 62.5%;
+}
+.md-offset-5 {
+	margin-left: 62.5%; 
+}
+.md-push-5 {
+	position: relative;
+	left: 62.5%; 
+	right: auto;
+}
+.md-pull-5 {
+	position: relative;
+	right: 62.5%; 
+	left: auto;
+}
+.md-col-6 {
+	width: 75%;
+}
+.md-offset-6 {
+	margin-left: 75%; 
+}
+.md-push-6 {
+	position: relative;
+	left: 75%; 
+	right: auto;
+}
+.md-pull-6 {
+	position: relative;
+	right: 75%; 
+	left: auto;
+}
+.md-col-7 {
+	width: 87.5%;
+}
+.md-offset-7 {
+	margin-left: 87.5%; 
+}
+.md-push-7 {
+	position: relative;
+	left: 87.5%; 
+	right: auto;
+}
+.md-pull-7 {
+	position: relative;
+	right: 87.5%; 
+	left: auto;
+}
+.md-col-8 {
+	width: 100%;
+}
+.md-push-8 {
+	position: relative;
+	left: 100%; 
+	right: auto;
+}
+.md-pull-8 {
+	position: relative;
+	right: 100%; 
+}
+/* end md-col breakpoint */
+}
+/*
+--------------------------------------
+lg-col breakpoint
+12 Column Grid
+--------------------------------------
+*/
+@media screen and (min-width: 68.75rem) {
+/*@media screen and (min-width: 1101px) {*/
+
+[class^="lg-col-"],
+[class*=" lg-col-"] {
+	display: inline-block;
+	vertical-align: top;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0% .5%;
+	float: left;
+}
+/*********** utilities **********/
+.gutter-add--left {
+	padding-left: .5%;
+}
+.gutter-add--right {
+	padding-right: .5%;
+}
+.lg-no-gutter--left {
+	padding-left: 0;
+}
+.lg-no-gutter--right {
+	padding-right: 0;
+}
+.lg-hide {
+	display: none;
+}
+/*********** columns **********/
+.lg-col-1 {
+	width: 8.33333333333333%;
+}
+.lg-offset-1 {
+	margin-left: 8.33333333333333%;
+}
+.lg-push-1 {
+	position: relative;
+	left: 8.33333333333333%; 
+	right: auto;
+}
+.lg-pull-1 {
+	position: relative;
+	right: 8.33333333333333%; 
+	left: auto;
+}
+.lg-col-2 {
+	width: 16.66666666666666%;
+}
+.lg-offset-2 {
+	margin-left: 16.66666666666666%;
+}
+.lg-push-2 {
+	position: relative;
+	left: 16.66666666666666%; 
+	right: auto;
+}
+.lg-pull-2 {
+	position: relative;
+	right: 16.66666666666666%; 
+	left: auto;
+}
+.lg-col-3 {
+	width: 25%;
+}
+.lg-offset-3 {
+	margin-left: 25%;
+}
+.lg-push-3 {
+	position: relative;
+	left: 25%; 
+	right: auto;
+}
+.lg-pull-3 {
+	position: relative;
+	right: 25%; 
+	left: auto;
+}
+.lg-col-4 {
+	width: 33.33333333333333%;
+}
+.lg-offset-4 {
+	margin-left: 33.33333333333333%;
+}
+.lg-push-4 {
+	position: relative;
+	left: 33.33333333333333%; 
+	right: auto;
+}
+.lg-pull-4 {
+	position: relative;
+	right: 33.33333333333333%; 
+	left: auto;
+}
+.lg-col-5 {
+	width: 41.66666666666666%;
+}
+.lg-offset-5 {
+	margin-left: 41.66666666666666%;
+}
+.lg-push-5 {
+	position: relative;
+	left: 41.66666666666666%; 
+	right: auto;
+}
+.lg-pull-5 {
+	position: relative;
+	right: 41.66666666666666%; 
+	left: auto;
+}
+.lg-col-6 {
+	width: 50%;
+}
+.lg-offset-6 {
+	margin-left: 50%;
+}
+.lg-push-6 {
+	position: relative;
+	left: 50%; 
+	right: auto;
+}
+.lg-pull-6 {
+	position: relative;
+	right: 50%; 
+	left: auto;
+}
+.lg-col-7 {
+	width: 58.33333333333333%;
+}
+.lg-offset-7 {
+	margin-left: 58.33333333333333%;
+}
+.lg-push-7 {
+	position: relative;
+	left: 58.33333333333333%; 
+	right: auto;
+}
+.lg-pull-7 {
+	position: relative;
+	right: 58.33333333333333%; 
+	left: auto;
+}
+.lg-col-8 {
+	width: 66.66666666666666%;
+}
+.lg-offset-8 {
+	margin-left: 66.66666666666666%;
+}
+.lg-push-8 {
+	position: relative;
+	left: 66.66666666666666%; 
+	right: auto;
+}
+.lg-pull-8 {
+	position: relative;
+	right: 66.66666666666666%; 
+	left: auto;
+}
+.lg-col-9 {
+	width: 75%;
+}
+.lg-offset-9 {
+	margin-left: 75%;
+}
+.lg-push-9 {
+	position: relative;
+	left: 75%; 
+	right: auto;
+}
+.lg-pull-9 {
+	position: relative;
+	right: 75%; 
+	left: auto;
+}
+.lg-col-10 {
+	width: 83.33333333333333%;
+}
+.lg-offset-10 {
+	margin-left: 83.33333333333333%;
+}
+.lg-push-10 {
+	position: relative;
+	left: 83.33333333333333%; 
+	right: auto;
+}
+.lg-pull-10 {
+	position: relative;
+	right: 83.33333333333333%; 
+	left: auto;
+}
+.lg-col-11 {
+	width: 91.66666666666666%;
+}
+.lg-offset-11 {
+	margin-left: 91.66666666666666%;
+}
+.lg-push-11 {
+	position: relative;
+	left: 91.66666666666666%; 
+	right: auto;
+}
+.lg-pull-11 {
+	position: relative;
+	right: 91.66666666666666%; 
+	left: auto;
+}
+.lg-col-12 {
+	width: 100%;
+}
+.lg-push-12 {
+	position: relative;
+	left: 100%; 
+	right: auto;
+}
+.lg-pull-12 {
+	position: relative;
+	right: 100%; 
+	left: auto;
+}
+/* end lg-col breakpoint */
+}
