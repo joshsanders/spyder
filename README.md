@@ -1,3 +1,3 @@
 # SPYDER
-SPYDER is a fluid CSS grid system (NOT A BOILERPLATE FRAMEWORK)
-Built by Josh Sanders
+Spyder—a fluid CSS grid system based on Flexbox
+
