@@ -1,0 +1,39 @@
+@mixin gutterCompensation {
+	margin-right: $grid-gutter-compensation;
+	margin-left: $grid-gutter-compensation;
+}
+@mixin flex-column {
+	padding: 0 $grid-gutter;
+	position: relative;
+	min-height: 1px;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+
+// mixin for using @include to control style of specific elements at diff. grid ranges
+
+@mixin media-range($range) {
+  @if $range == sm {
+    @media screen and (max-width: $media-break--sm-max) { 
+    	@content;
+    }
+  }
+  @else if $range == md {
+    @media screen and (min-width: $media-break--md-min) and (max-width: $media-break--md-max) { 
+    	@content; 
+    }
+  }
+  @else if $range == lg {
+    @media screen and (min-width: $media-break--lg-min) { 
+    	@content; 
+    }
+  }
+  // @else if $range == xl {
+  //   @media screen and (min-width: $grid-size--lg) { 
+  //   	@content; 
+  //   }
+  // }
+}
+
+
+

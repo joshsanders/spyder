@@ -1,6 +1,6 @@
 /*
  *  SPYDER 2.2 
- *  A bare bones grid system designed for the in-house design team at 2600Hz
+ *  A bare bones grid system designed for the in-house team at 2600Hz
  *	Last Updated: 6.15
  *  -------------------------------------------------------
  *
@@ -162,8 +162,8 @@ sm-col breakpoint
 .sm-no-gutter--right {
 	padding-right: 0;
 }
-.sm-hide {
-	display: none;
+*.sm-hide {
+	display: none !important;
 }
 /*********** columns **********/
 .sm-col-1 {
@@ -261,8 +261,8 @@ md-col breakpoint
 .md-no-gutter--right {
 	padding-right: 0;
 }
-.md-hide {
-	display: none;
+*.md-hide {
+	display: none !important;
 }
 /*********** columns **********/
 .md-col-1 {
@@ -424,7 +424,7 @@ lg-col breakpoint
 	padding-right: 0;
 }
 .lg-hide {
-	display: none;
+	display: none !important;
 }
 /*********** columns **********/
 .lg-col-1 {
