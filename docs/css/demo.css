@@ -3191,12 +3191,10 @@ Copyright (c) 2014 Daniel Eden
     flex-direction: column;
   }
   .grid__row .col--sm {
-    margin-bottom: 0;
     max-width: 100%;
     flex-basis: 100%;
   }
   .grid__row .col--sm:not(:first-of-type) {
-    margin-bottom: 0;
     margin-top: calc(0.75rem * 2);
   }
 
@@ -3211,8 +3209,8 @@ Copyright (c) 2014 Daniel Eden
     min-height: 1px;
     flex-grow: 1;
     flex-shrink: 1;
-    max-width: calc(100% / 8);
-    flex-basis: calc(100% / 8);
+    max-width: 12.5%;
+    flex-basis: 12.5%;
   }
 
   .col--md-2_8 {
@@ -3221,8 +3219,8 @@ Copyright (c) 2014 Daniel Eden
     min-height: 1px;
     flex-grow: 1;
     flex-shrink: 1;
-    max-width: calc(100% / 4);
-    flex-basis: calc(100% / 4);
+    max-width: 25%;
+    flex-basis: 25%;
   }
 
   .col--md-3_8 {
@@ -3241,8 +3239,8 @@ Copyright (c) 2014 Daniel Eden
     min-height: 1px;
     flex-grow: 1;
     flex-shrink: 1;
-    max-width: calc(100% / 2);
-    flex-basis: calc(100% / 2);
+    max-width: 50%;
+    flex-basis: 50%;
   }
 
   .col--md-5_8 {
@@ -3296,8 +3294,8 @@ Copyright (c) 2014 Daniel Eden
     min-height: 1px;
     flex-grow: 1;
     flex-shrink: 1;
-    max-width: calc(100% / 12);
-    flex-basis: calc(100% / 12);
+    max-width: 8.33333333333333%;
+    flex-basis: 8.33333333333333%;
   }
 
   .col--lg-2_12 {
@@ -3306,8 +3304,8 @@ Copyright (c) 2014 Daniel Eden
     min-height: 1px;
     flex-grow: 1;
     flex-shrink: 1;
-    max-width: calc(100% / 6);
-    flex-basis: calc(100% / 6);
+    max-width: 16.66666666666666%;
+    flex-basis: 16.66666666666666%;
   }
 
   .col--lg-3_12 {
@@ -3316,8 +3314,8 @@ Copyright (c) 2014 Daniel Eden
     min-height: 1px;
     flex-grow: 1;
     flex-shrink: 1;
-    max-width: calc(100% / 4);
-    flex-basis: calc(100% / 4);
+    max-width: 25%;
+    flex-basis: 25%;
   }
 
   .col--lg-4_12 {
@@ -3326,8 +3324,8 @@ Copyright (c) 2014 Daniel Eden
     min-height: 1px;
     flex-grow: 1;
     flex-shrink: 1;
-    max-width: calc(100% / 3);
-    flex-basis: calc(100% / 3);
+    max-width: 33.33333333333333%;
+    flex-basis: 33.33333333333333%;
   }
 
   .col--lg-5_12 {
@@ -3346,8 +3344,8 @@ Copyright (c) 2014 Daniel Eden
     min-height: 1px;
     flex-grow: 1;
     flex-shrink: 1;
-    max-width: calc(100% / 2);
-    flex-basis: calc(100% / 2);
+    max-width: 50%;
+    flex-basis: 50%;
   }
 
   .col--lg-7_12 {
@@ -3516,9 +3514,119 @@ img {
   outline: none;
 }
 
+html {
+  font-size: 1em;
+}
+
 body {
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
-  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+}
+
+p {
+  margin-bottom: 1.3em;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 5.063em;
+}
+
+h2 {
+  font-size: 3.375em;
+}
+
+h3 {
+  font-size: 2.25em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+small, .font--small {
+  font-size: 0.75em;
+}
+
+.hero {
+  height: 100vh;
+  max-height: 100vh;
+  background: #202029;
+  box-shadow: inset 0 0 50px 0px rgba(0, 0, 0, 0.35);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+}
+
+.hero-content {
+  text-align: center;
+  align-self: center;
+  flex-grow: 1;
+  color: #606069;
+}
+.hero-content .hero__symbol {
+  width: 6rem;
+}
+.hero-content .hero__title {
+  margin: 1rem 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .15em;
+  font-family: 'titillium web', sans-serif;
+}
+.hero-content .hero__title .letter-e {
+  display: inline-block;
+  height: 37px;
+  position: relative;
+  width: 26px;
+  margin: 0 -10px 0 -16px;
+}
+.hero-content .hero__title .letter-e .top {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: #fd3b3b;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero-content .hero__title .letter-e .mid {
+  display: block;
+  width: 75%;
+  height: 5px;
+  background: #fd3b3b;
+  position: absolute;
+  top: calc(50% - 3px);
+  left: 0;
+}
+.hero-content .hero__title .letter-e .bottom {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: #fd3b3b;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.hero-content .hero__descrip {
+  margin: 0;
+  color: #606069;
+}
+.hero-content .hero__actions {
+  margin-top: 2rem;
 }
 
 .grid {

@@ -18,7 +18,7 @@
 	padding-right: $grid-gutter;
 }
 .grid__row { 
-	@include gutterCompensation;
+	@include gutter-compensation;
 	margin-bottom: $grid-spacing--vert-1;
 	display: -webkit-box;
 	display: -webkit-flex;

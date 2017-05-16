@@ -2,6 +2,7 @@
 $grid-width: 100%;
 $grid-max-width: 1440px;
 $grid-gutter: .75rem;
+$grid-gutter--sm: .5rem;
 $grid-gutter-compensation: calc(#{$grid-gutter} * -1);
 $grid-spacing--vert-1: calc(#{$grid-gutter} * 2);
 
