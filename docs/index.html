@@ -3,694 +3,327 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>SPYDER</title>
+		<title>Spyder—An adaptable, fluid CSS grid system</title>
 		<!-- insert Google web fonts link here -->
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-		<!-- <link href="spyder-2.2.css" rel="stylesheet" type="text/css">
-		<link href="animate.css" rel="stylesheet" type="text/css"> -->
+		<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+		<!-- <link href="animate.css" rel="stylesheet" type="text/css"> -->
+		<!-- <link href="example.css" rel="stylesheet" type="text/css"> -->
+
+		<link href="../assets/spyder-3.0.css" rel="stylesheet" type="text/css">
 		<link href="css/demo.css" rel="stylesheet" type="text/css">
 	</head>
 	 
 	<body>
-		<header>
-			<nav class="toggles-wrap gutter-add--left">
-				<div class="content-wrap">
-					<div class="logo"></div>
-					<ul class="gutter-add--right">
-						<li>
-							<button class="active" data-view="grid"><i class="fa fa-tasks"></i></button>
-						</li>
-						<li>
-							<button class="" data-view="structure"><i class="fa fa-sort-amount-asc"></i></button>
-						</li>
-						<li>
-							<button class="" data-view="example"><i class="fa fa-eye"></i></button>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</header>
-	
-		<!-- ===================== Grid Structure ===================== -->
-		<section class="grid is-visible" data-view="grid">
-			<div class="content-wrap">
-				<div class="row">
-					<h2 class="page-title">The Grid</h2>
-				</div>
-				<div class="row">
-					<span class="info gutter-add--left gutter-add--right">The grid is fluid, and supports media ranges (3) rather than target specific device breakpoints (resize browser to see in action).
-						<br>
-						<span class="current-view lg-vis">Currently viewing the Large (.lg) grid, which is a 12 column grid that targets most laptops and larger screens</span>
-						<span class="current-view md-vis">Currently viewing the Medium (.md) grid, which is an 8 column grid that targets most larger tablets</span>
-						<span class="current-view sm-vis">Currently viewing the Small (.sm) grid, which is a 4 column grid that targets most smaller tablets and mobile devices</span>
+
+		<header class="hero">
+			<div class="hero-content">
+				<object class="hero__symbol" type="image/svg+xml" data="img/symbol--hero.svg"></object>
+				<h2 class="hero__title">Spyd
+					<span class="letter-e">
+						<span class="top"></span>
+						<span class="mid"></span>
+						<span class="bottom"></span>
 					</span>
-				</div>
-
-				<div class="row mt-80">
-					<div class="lg-col-1 md-col-1 sm-col-1">
-						<p>
-							<span class="sm-vis">.sm-col-1</span>
-							<span class="md-vis">.md-col-1</span>
-							<span class="lg-vis">.lg-col-1</span>
-						</p>
-					</div>
-					<div class="lg-col-1 md-col-1 sm-col-1">
-						<p>
-							<span class="sm-vis">.sm-col-1</span>
-							<span class="md-vis">.md-col-1</span>
-							<span class="lg-vis">.lg-col-1</span>
-						</p>
-					</div>
-					<div class="lg-col-1 md-col-1 sm-col-1">
-						<p>
-							<span class="sm-vis">.sm-col-1</span>
-							<span class="md-vis">.md-col-1</span>
-							<span class="lg-vis">.lg-col-1</span>
-						</p>
-					</div>
-					<div class="lg-col-1 md-col-1 sm-col-1">
-						<p>
-							<span class="sm-vis">.sm-col-1</span>
-							<span class="md-vis">.md-col-1</span>
-							<span class="lg-vis">.lg-col-1</span>
-						</p>
-					</div>
-					<div class="lg-col-1 md-col-1 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-1</span>
-							<span class="lg-vis">.lg-col-1</span>
-						</p>
-					</div>
-					<div class="lg-col-1 md-col-1 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-1</span>
-							<span class="lg-vis">.lg-col-1</span>
-						</p>
-					</div>
-					<div class="lg-col-1 md-col-1 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-1</span>
-							<span class="lg-vis">.lg-col-1</span>
-						</p>
-					</div>
-					<div class="lg-col-1 md-col-1 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-1</span>
-							<span class="lg-vis">.lg-col-1</span>
-						</p>
-					</div>
-					<div class="lg-col-1 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-1</span>
-						</p>
-					</div>
-					<div class="lg-col-1 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-1</span>
-						</p>
-					</div>
-					<div class="lg-col-1 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-1</span>
-						</p>
-					</div>
-					<div class="lg-col-1 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-1</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-2 md-col-2 sm-col-2">
-						<p>
-							<span class="sm-vis">.sm-col-2</span>
-							<span class="md-vis">.md-col-2</span>
-							<span class="lg-vis">.lg-col-2</span>
-						</p>
-					</div>
-					<div class="lg-col-2 md-col-2 sm-col-2">
-						<p>
-							<span class="sm-vis">.sm-col-2</span>
-							<span class="md-vis">.md-col-2</span>
-							<span class="lg-vis">.lg-col-2</span>
-						</p>
-					</div>
-					<div class="lg-col-2 md-col-2 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-2</span>
-							<span class="lg-vis">.lg-col-2</span>
-						</p>
-					</div>
-					<div class="lg-col-2 md-col-2 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-2</span>
-							<span class="lg-vis">.lg-col-2</span>
-						</p>
-					</div>
-					<div class="lg-col-2 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-2</span>
-						</p>
-					</div>
-					<div class="lg-col-2 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-2</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-3 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-3</span>
-						</p>
-					</div>
-					<div class="lg-col-3 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-3</span>
-						</p>
-					</div>
-					<div class="lg-col-3 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-3</span>
-						</p>
-					</div>
-					<div class="lg-col-3 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-3</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-4 md-col-4 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-4</span>
-							<span class="lg-vis">.lg-col-4</span>
-						</p>
-					</div>
-					<div class="lg-col-4 md-col-4 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-4</span>
-							<span class="lg-vis">.lg-col-4</span>
-						</p>
-					</div>
-					<div class="lg-col-4 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-4</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-6 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-6</span>
-						</p>
-					</div>
-					<div class="lg-col-6 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-6</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-12 md-col-8 sm-col-4">
-						<p>
-							<span class="sm-vis">.sm-col-4</span>
-							<span class="md-vis">.md-col-8</span>
-							<span class="lg-vis">.lg-col-12</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-1 md-col-1 sm-col-1">
-						<p>
-							<span class="sm-vis">.sm-col-1</span>
-							<span class="md-vis">.md-col-1</span>
-							<span class="lg-vis">.lg-col-1</span>
-						</p>
-					</div>
-					<div class="lg-col-11 md-col-7 sm-col-3">
-						<p>
-							<span class="sm-vis">.sm-col-3</span>
-							<span class="md-vis">.md-col-7</span>
-							<span class="lg-vis">.lg-col-11</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-2 md-col-2 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-2</span>
-							<span class="lg-vis">.lg-col-2</span>
-						</p>
-					</div>
-					<div class="lg-col-10 md-col-6 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-6</span>
-							<span class="lg-vis">.lg-col-10</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-3 md-col-3 sm-col-3">
-						<p>
-							<span class="sm-vis">.sm-col-3</span>
-							<span class="md-vis">.md-col-3</span>
-							<span class="lg-vis">.lg-col-3</span>
-						</p>
-					</div>
-					<div class="lg-col-9 md-col-5 sm-col-1">
-						<p>
-							<span class="sm-vis">.sm-col-1</span>
-							<span class="md-vis">.md-col-5</span>
-							<span class="lg-vis">.lg-col-9</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-4 md-col-4 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-4</span>
-							<span class="lg-vis">.lg-col-4</span>
-						</p>
-					</div>
-					<div class="lg-col-8 md-col-4 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-4</span>
-							<span class="lg-vis">.lg-col-8</span>
-						</p>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="lg-col-5 md-col-5 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-5</span>
-							<span class="lg-vis">.lg-col-5</span>
-						</p>
-					</div>
-					<div class="lg-col-7 md-col-3 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-3</span>
-							<span class="lg-vis">.lg-col-7</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-6 md-col-6 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-6</span>
-							<span class="lg-vis">.lg-col-6</span>
-						</p>
-					</div>
-					<div class="lg-col-6 md-col-2 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-2</span>
-							<span class="lg-vis">.lg-col-6</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-7 md-col-7 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-7</span>
-							<span class="lg-vis">.lg-col-7</span>
-						</p>
-					</div>
-					<div class="lg-col-5 md-col-1 sm-hide">
-						<p>
-							<span class="md-vis">.md-col-1</span>
-							<span class="lg-vis">.lg-col-5</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-8 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-8</span>
-						</p>
-					</div>
-					<div class="lg-col-4 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-4</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-9 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-9</span>
-						</p>
-					</div>
-					<div class="lg-col-3 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-3</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-10 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-10</span>
-						</p>
-					</div>
-					<div class="lg-col-2 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-2</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-11 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-11</span>
-						</p>
-					</div>
-					<div class="lg-col-1 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-1</span>
-						</p>
-					</div>
-				</div>
-
-				<!-- OFFSET columns -->
-				<div class="row mt-100">
-					<h2 class="page-title">Offsetting Columns</h2>
-				</div>
-				<div class="row">
-					<span class="info">If a layout requires spacing between columns for design purposes, .offset classes can be used to to shift columns and create space.</span>
-				</div>
-
-				<div class="row mt-60">
-					<div class="lg-col-4 lg-offset-3 md-col-3 md-offset-2 sm-col-1 sm-offset-1">
-						<p>
-							<span class="sm-vis">.sm-col-1<br>.sm-offset-1</span>
-							<span class="md-vis">.md-col-3<br>.md-offset-2</span>
-							<span class="lg-vis">.lg-col-4<br>.lg-offset-3</span>
-						</p>
-					</div>
-					<div class="lg-col-2 lg-offset-2 md-col-2 md-offset-1 sm-col-1 sm-offset-1">
-						<p>
-							<span class="sm-vis">.sm-col-1<br>.sm-offset-1</span>
-							<span class="md-vis">.md-col-2<br>.md-offset-1</span>
-							<span class="lg-vis">.lg-col-2<br>.lg-offset-2</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-4 lg-offset-1 md-col-2 sm-col-1">
-						<p>
-							<span class="sm-vis">.sm-col-1</span>
-							<span class="md-vis">.md-col-2</span>
-							<span class="lg-vis">.lg-col-4<br>.lg-offset-1</span>
-						</p>
-					</div>
-					<div class="lg-col-4 lg-offset-3 md-col-2 md-offset-2 sm-col-2 sm-offset-1">
-						<p>
-							<span class="sm-vis">.sm-col-2<br>.sm-offset-1</span>
-							<span class="md-vis">.md-col-2<br>.md-offset-2</span>
-							<span class="lg-vis">.lg-col-4<br>.lg-offset-3</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-2 lg-offset-4 md-hide sm-hide">
-						<p>
-							<span class="lg-vis">.lg-col-2<br>.lg-offset-4</span>
-						</p>
-					</div>
-					<div class="lg-col-2 lg-offset-4 md-col-5 md-offset-3 sm-col-3 sm-offset-1">
-						<p>
-							<span class="sm-vis">.sm-col-3<br>.sm-offset-1</span>
-							<span class="md-vis">.md-col-5<br>.md-offset-3</span>
-							<span class="lg-vis">.lg-col-2<br>.lg-offset-4</span>
-						</p>
-					</div>
-				</div>
-
-				<!-- PUSH / PULL columns -->
-				<div class="row mt-100">
-					<h2 class="page-title">Re-Ordering Columns</h2>
-				</div>
-				<div class="row">
-					<div class="lg-col-8 lg-offset-2 md-col-6 md-offset-1 sm-col-4">
-						<span class="info">Layouts may need to be re-organized sometimes for smaller screens, but the source code is always written in one specific order. To change the order in which columns appear, simply add the .x-push.y and .x-pull-y classes to the columns in a row where you need to change the layout.</span>
-						<span class="current-view sm-hide md-hide lg-vis">Note (2nd and 3rd rows) that when applying .push / .pull classes to columns that also haven .offset class, the 'offset' amount remains present for all elements in the entire row. However, if you remove the .offset class on the first column in source order, the whole row shifts back to the left.</span>
-					</div>
-				</div>
-
-				<div class="row mt-60">
-					<div class="lg-col-3 lg-offset-1 md-col-5 sm-col-2">
-						<p>1st in source order<br><br>
-							<span class="sm-vis">.sm-col-2</span>
-							<span class="md-vis">.md-col-5</span>
-							<span class="lg-vis">.lg-col-3<br>.lg-offset-1</span>
-						</p>
-					</div>
-					<div class="lg-col-7 md-col-3 sm-col-2">
-						<p class="source-2nd">2nd in source order<br><br>
-							<span class="sm-vis">.sm-col-2</span>
-							<span class="md-vis">.md-col-3</span>
-							<span class="lg-vis">.lg-col-7</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-3 lg-offset-1 lg-push-7 md-col-5 md-push-3 sm-col-2 sm-push-2">
-						<p>1st in source order<br><br>
-							<span class="sm-vis">.sm-col-2<br>.sm-push-2</span>
-							<span class="md-vis">.md-col-5<br>.md-push-3</span>
-							<span class="lg-vis">.lg-col-3<br>.lg-offset-1<br>.lg-push-7</span>
-						</p>
-					</div>
-					<div class="lg-col-7 lg-pull-3 md-col-3 md-pull-5 sm-col-2 sm-pull-2">
-						<p class="source-2nd">2nd in source order<br><br>
-							<span class="sm-vis">.sm-col-2<br>.sm-pull-2</span>
-							<span class="md-vis">.md-col-3<br>.md-pull-5</span>
-							<span class="lg-vis">.lg-col-7<br>.lg-pull-3</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-3 lg-push-7 md-col-5 sm-col-2">
-						<p>1st in source order<br><br>
-							<span class="sm-vis">.sm-col-2</span>
-							<span class="md-vis">.md-col-5</span>
-							<span class="lg-vis">.lg-col-3<br>.lg-push-7</span>
-						</p>
-					</div>
-					<div class="lg-col-7 lg-pull-3 md-col-3 sm-col-2">
-						<p class="source-2nd">2nd in source order<br><br>
-							<span class="sm-vis">.sm-col-2</span>
-							<span class="md-vis">.md-col-3</span>
-							<span class="lg-vis">.lg-col-7<br>.lg-pull-3</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="lg-col-3 lg-offset-1 md-col-5 sm-col-2">
-						<p>1st in source order<br><br>
-							<span class="sm-vis">.sm-col-2</span>
-							<span class="md-vis">.md-col-5</span>
-							<span class="lg-vis">.lg-col-43<br>.lg-offset-1</span>
-						</p>
-					</div>
-					<div class="lg-col-7 md-col-3 sm-col-2">
-						<p class="source-2nd">2nd in source order<br><br>
-							<span class="sm-vis">.sm-col-2</span>
-							<span class="md-vis">.md-col-3</span>
-							<span class="lg-vis">.lg-col-7</span>
-						</p>
-					</div>
-				</div>
+					r
+				</h2>
+				<h4 class="hero__descrip">A customizable, fluid CSS grid system for creating responsive layouts</h4>
 				
 
-
-
-
-
-
-
-			</div> <!-- end content-wrap -->
-		</section>
-
-		<!-- ===================== Implementation (Hierarchy) ===================== -->
-		<section class="implementation" data-view="structure">
-			<div class="content-wrap">
-				<div class="row">
-					<h2 class="page-title">Structure &amp; Implementation</h2>
+				<div class="hero__actions">
+					<a class="github-button" href="https://github.com/joshsanders/spyder" data-icon="octicon-star" data-size="large" aria-label="Star joshsanders/spyder on GitHub">Star</a>
+					<a class="github-button" href="https://github.com/joshsanders/spyder/fork" data-size="large" aria-label="Fork joshsanders/spyder on GitHub">Fork</a>
+					<a class="github-button" href="https://github.com/joshsanders/spyder" data-icon="octicon-cloud-download" data-size="large" aria-label="Download Spyder">Download</a>
 				</div>
-				<div class="row">
-					<span class="info">The diagram and code example below show the necessary elements and hierarchy that is needed in order to create layouts using the grid.</span>
+			</div>
+		</header>
+		
+		<!-- 12 col grid @ lg media-range -->
+		<div class="grid">
+  			<div style="font-size: 1rem; margin-bottom: 1rem;">Now viewing the 12-column grid which </div>
+    
+			<div class="grid__row">
+				<div class="col--sm col--md-1_8 col--lg-1_12">
+					<div class="content">
+						<span class="hidden--md hidden--lg">.col--sm</span>
+						<span class="hidden--sm hidden--lg">.col--md-1_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+					</div>
 				</div>
-
-				<div class="diagram mt-80" title="label" data-label="element">
-					<i>This is the HTML element in your structure that will be the parent section of any content that you wish to align to the grid&mdash;i.e. Headers, Sections, Divs etc...</i>
-
-					<div class="content-wrap" title="label" data-label="content-wrap">
-						<i>The very next element should be a div with the class of .content-wrap. This will be the master container of the grid, and will contain all grid elements and content.</i>
-
-						<div class="row" title="label" data-label="row">
-							<i>The .content-wrap element can contain mulitple 'rows', which as its name implies, organizes your layout design into rows. These rows are necessary to control the layout of the children columns, which make up the actual grid.</i>
-
-							<div class="lg-col-6 md-col-4 sm-col-2" title="label" data-label="x-col-y">
-								<i>Finally, the main element of the grid&mdash;columns. Syntax for the column classes is formatted as .x-col-y, where 'x'=[sm, md, or lg] and 'y'=[number of columns the element should span].</i>
-
-								<div class="content-placeholder">ALL ELEMENTS AND CONTENT THAT YOU WISH TO ALIGN TO THE GRID SHOULD BE PLACED WITHIN COLUMNS</div>
-							</div>
-							<div class="lg-col-6 md-col-4 sm-col-2" title="label" data-label="x-col-y">
-								<i>Finally, the main element of the grid&mdash;columns. Syntax for the column classes is formatted as .x-col-y, where 'x'=[sm, md, or lg] and 'y'=[number of columns the element should span].</i>
-
-								<div class="content-placeholder">ALL ELEMENTS AND CONTENT THAT YOU WISH TO ALIGN TO THE GRID SHOULD BE PLACED WITHIN COLUMNS</div>
-							</div>
-						</div>
-					</div> <!-- end diagram > content-wrap -->
-				</div> <!-- end diagram -->
-
-				<div class="row mt-80">
-					<div class="code-wrapper">
-						<code class="html">
-							<span class="tag">&lt;section&gt;<br>
-							<span class="indent"></span>&lt;div <span class="attribute">class</span>=<span class="value">"content-wrap"</span>&gt;<br>
-							<span class="indent"><span class="indent"></span>&lt;div <span class="attribute">class</span>=<span class="value">"row"</span>&gt;<br>
-							<span class="indent"><span class="indent"><span class="indent"></span>&lt;div <span class="attribute">class</span>=<span class="value">"x-col-y"</span>&gt;<br>
-							<span class="indent"><span class="indent"><span class="indent"><span class="indent"><span class="yellow">ALL ELEMENTS AND CONTENT THAT YOU WISH TO ALIGN TO THE GRID SHOULD BE PLACED WITHIN COLUMNS </span><br>
-							<span class="indent"><span class="indent"><span class="indent">&lt;/div&gt;</span><br>
-							<span class="indent"><span class="indent">&lt;/div&gt;</span><br>
-							<span class="indent">&lt;/div&gt;</span><br>
-							&lt;/section&gt;</span><br>
-						</code>
-					</div> <!-- end code-wrapper -->
+				<div class=" col--sm col--md-1_8 col--lg-1_12">
+					<div class="content">
+						<span class="hidden--md hidden--lg">.col--sm</span>
+						<span class="hidden--sm hidden--lg">.col--md-1_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+					</div>
 				</div>
-
-
-			</div> <!-- end content-wrap -->
-		</section>
-
-		<!-- ===================== Example ===================== -->
-		<section class="example" data-view="example">
-			<div class="content-wrap">
-				<div class="row">
-					<h2 class="page-title">Example</h2>
+				<div class="col--sm col--md-1_8 col--lg-1_12">
+					<div class="content">
+						<span class="hidden--md hidden--lg">.col--sm</span>
+						<span class="hidden--sm hidden--lg">.col--md-1_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+					</div>
 				</div>
-				<div class="row">
-					<span class="info">Resize the browser to see how the layout changes according to the screen size</span>
+				<div class="col--sm col--md-1_8 col--lg-1_12">
+					<div class="content">
+						<span class="hidden--md hidden--lg">.col--sm</span>
+						<span class="hidden--sm hidden--lg">.col--md-1_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+					</div>
 				</div>
-
-
-				<div class="row mt-80">
-					<div class="min-browser">
-						<div class="top-bar">
-							<div class="view-actions">
-								<span></span>
-								<span></span>
-								<span></span>
-							</div>
-						</div>
-
-						<div class="browser-window">
-							<div class="content-wrap">
-								<div class="row">
-									<div class="logo-fw gutter-add--left">
-										<p class="">
-											<span class="lg-vis md-vis sm-vis">Logo</span>
-										</p>
-									</div>
-
-									<!-- <div class="lg-col-6 lg-offset-4 md-col-5 md-offset-2 sm-menu-fix gutter-addright"> -->
-									<div class="menu sm-menu gutter-add--right">
-										<p>
-											<span class="lg-vis md-vis">Menu</span>
-											<span class="sm-vis"><i class="fa fa-bars"></i></span>
-										</p>
-									</div>
-								</div>
-
-								<div class="row mt-60">
-									<div class="lg-col-12 md-col-8 sm-col-4">
-										<p style="height:350px;">
-											<span class="v-align lg-vis md-vis sm-vis">Hero Intro</span>
-										</p>
-									</div>
-								</div>
-
-								<div class="row mt-60">
-									<div class="lg-col-4 lg-offset-1 md-col-3 sm-col-2 sm-push-2">
-										<p class="fh-300">
-											<i class="v-align fa fa-picture-o fa-5x"></i>
-										</p>
-									</div>
-									<div class="lg-col-6 md-col-5 sm-col-2 sm-pull-2">
-										<p style="height:150px;">
-											<span class="v-align lg-vis md-vis sm-vis">Content</span>
-										</p>
-									</div>
-								</div>
-
-								<div class="row mt-60">
-									<div class="lg-col-4 lg-offset-1 lg-push-6 md-col-3 sm-col-2 sm-push-2">
-										<p class="fh-300">
-											<i class="v-align fa fa-picture-o fa-5x"></i>
-										</p>
-									</div>
-									<div class="lg-col-6 lg-pull-4 md-col-5 sm-col-2 sm-pull-2">
-										<p style="height:150px;">
-											<span class="v-align lg-vis md-vis sm-vis">Content</span>
-										</p>
-									</div>
-								</div>
-
-								<div class="row mt-60">
-									<div class="lg-col-4 lg-offset-1 md-col-3 sm-col-2 sm-push-2">
-										<p class="fh-300">
-											<i class="v-align fa fa-picture-o fa-5x"></i>
-										</p>
-									</div>
-									<div class="lg-col-6 md-col-5 sm-col-2 sm-pull-2">
-										<p style="height:150px;">
-											<span class="v-align lg-vis md-vis sm-vis">Content</span>
-										</p>
-									</div>
-								</div>
-
-								<div class="row mt-60 mb-0">
-									<div class="lg-col-12 md-col-8 sm-col-4">
-										<p style="height:225px;">
-											<span class="v-align lg-vis md-vis sm-vis">Footer</span>
-										</p>
-									</div>
-								</div>
-
-
-							</div>
-						</div>
-					</div> <!-- end minimal browser -->
+				<div class="hidden--sm col--md-1_8 col--lg-1_12">
+					<div class="content">
+						<span class="hidden--sm hidden--lg">.md-col-1_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+					</div>
 				</div>
+				<div class="hidden--sm col--md-1_8 col--lg-1_12">
+					<div class="content">
+						<span class="hidden--sm hidden--lg">.md-col-1_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+					</div>
+				</div>
+				<div class="hidden--sm col--md-1_8 col--lg-1_12">
+					<div class="content">
+						<span class="hidden--sm hidden--lg">.md-col-1_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+					</div>
+				</div>
+				<div class="hidden--sm col--md-1_8 col--lg-1_12">
+					<div class="content">
+						<span class="hidden--sm hidden--lg">.md-col-1_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+					</div>
+				</div>
+				<div class="hidden--sm hidden--md col--lg-1_12">
+					<div class="content">
+						<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+					</div>
+				</div>
+				<div class="hidden--sm hidden--md col--lg-1_12">
+					<div class="content">
+						<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+					</div>
+				</div>
+				<div class="hidden--sm hidden--md col--lg-1_12">
+					<div class="content">
+						<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+					</div>
+				</div>
+				<div class="hidden--sm hidden--md col--lg-1_12">
+					<div class="content">
+						<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+					</div>
+				</div>
+			</div> 
+		  	<!-- /grid__row -->
+  
+			<div class="grid__row">
+				<div class="col--sm col--md-2_8 col--lg-2_12">
+					<div class="content">
+						<span class="hidden--md hidden--lg">.sm-col</span>
+						<span class="hidden--sm hidden--lg">.md-col--2_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+					</div>
+				</div>
+				<div class="hidden--sm col--md-2_8 col--lg-2_12">
+					<div class="content">
+						<span class="hidden--lg">.md-col--2_8</span>
+						<span class="hidden--md">.col--lg-1_12</span>
+					</div>
+				</div>
+				<div class="hidden--sm col--md-2_8 col--lg-2_12">
+					<div class="content">
+						<span class="hidden--lg">.md-col--2_8</span>
+						<span class="hidden--md">.col--lg-1_12</span>
+					</div>
+				</div>
+				<div class="hidden--sm col--md-2_8 col--lg-2_12">
+					<div class="content">
+						<span class="hidden--lg">.md-col--2_8</span>
+						<span class="hidden--md">.col--lg-1_12</span>
+					</div>
+				</div>
+				<div class="hidden--sm hidden--md col--lg-2_12">
+					<div class="content">
+						<span class="">.col--lg-1_12</span>
+					</div>
+				</div>
+				<div class="hidden--sm hidden--md col--lg-2_12">
+					<div class="content">
+						<span class="">.col--lg-1_12</span>
+					</div>
+				</div>
+			</div>
+		    <!-- /grid__row -->
+		  
+			<div class="grid__row">
+				<div class="col--sm col--md-4_8 col--lg-3_12">
+					<div class="content">
+						<span class="hidden--md hidden--lg">.col--sm</span>
+						<span class="hidden--sm hidden--lg">.col--md-4_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-3_12</span>
+					</div>
+				</div>
+				<div class="hidden--sm col--md-4_8 col--lg-3_12">
+					<div class="content">
+						<span class="hidden--lg">.col--md-4_8</span>
+						<span class="hidden--md">.col--3_12</span>
+					</div>
+				</div>
+				<div class="hidden--sm hidden--md col--lg-3_12">
+					<div class="content">
+						<span>.col--lg-3_12</span>
+					</div>
+				</div>
+				<div class="hidden--sm hidden--md col--lg-3_12">
+					<div class="content">
+						<span>.col--lg-3_12</span>
+					</div>
+				</div>
+			</div>
+		  	<!-- /grid__row -->
+  
+  
+			<div class="grid__row">
+				<div class="col--sm col--md-full col--lg-4_12">
+					<div class="content">
+						<span class="hidden--md hidden--lg">.col--sm</span>
+						<span class="hidden--sm hidden--lg">.col--md-full</span>
+						<span class="hidden--sm hidden--md">.col--lg-4_12</span>
+					</div>
+				</div>
+				<div class="hidden--sm hidden--md col--lg-4_12">
+					<div class="content">.col--lg-4_12</div>
+				</div>
+				<div class="hidden--sm hidden--md col--lg-4_12">
+					<div class="content">
+						<span class="hidden--lg">.col--md-full</span>
+						<span class="hidden--md">.col--lg-4_12</span>
+					</div>
+				</div>
+			</div>
+			<!-- /grid__row -->
 
-			</div> <!-- end content-wrap -->
-		</section>
 
-		<script type="text/javascript" src="jquery-1.9.1.js"></script>
-		<script type="text/javascript" src="script.js"></script>
+			<div class="grid__row hidden--sm hidden--md">
+				<div class="col--lg-6_12">
+					<div class="content">
+						<span>.col--lg-6_12</span>
+					</div>
+				</div>
+				<div class="col--lg-6_12">
+					<div class="content">
+						<span>.col--lg-6_12</span>
+					</div>
+				</div>
+			</div> <!-- /grid__row -->
+  
+			<div class="grid__row hidden--sm hidden--md">
+				<div class="col--lg-full">
+					<div class="content">
+						<span>.col--lg-full</span>
+					</div>
+				</div>
+			</div> <!-- /grid__row -->
+
+			<div class="grid__row">
+				<div class="col--sm col--md-1_8 col--lg-1_12">
+					<div class="content">
+						<span class="hidden--md hidden--lg">.col--sm</span>
+						<span class="hidden--sm hidden--lg">.col--md-1_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+					</div>
+				</div>
+				<div class="hidden--sm col--md-7_8 col--lg-11_12">
+					<div class="content">
+						<span class="hidden--sm hidden--lg">.col--md-7_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-11_12</span>
+					</div>
+				</div>
+			</div> <!-- /grid__row -->
+
+			<div class="grid__row hidden--sm">
+				<div class="col--md-2_8 col--lg-2_12">
+					<div class="content">
+						<span class="hidden--sm hidden--lg">.col--md-2_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-2_12</span>
+					</div>
+				</div>
+				<div class="col--md-6_8 col--lg-10_12">
+					<div class="content">
+						<span class="hidden--sm hidden--lg">.col--md-6_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-10_12</span>
+					</div>
+				</div>
+			</div> <!-- /grid__row -->
+
+			<div class="grid__row hidden--sm">
+				<div class="col--md-3_8 col--lg-3_12">
+					<div class="content">
+						<span class="hidden--sm hidden--lg">.col--md-3_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-3_12</span>
+					</div>
+				</div>
+				<div class="col--md-5_8 col--lg-9_12">
+					<div class="content">
+						<span class="hidden--sm hidden--lg">.col--md-5_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-9_12</span>
+					</div>
+				</div>
+			</div> <!-- /grid__row -->
+
+			<div class="grid__row hidden--sm">
+				<div class="col--md-4_8 col--lg-4_12">
+					<div class="content">
+						<span class="hidden--sm hidden--lg">.col--md-4_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-4_12</span>
+					</div>
+				</div>
+				<div class="col--md-4_8 col--lg-8_12">
+					<div class="content">
+						<span class="hidden--sm hidden--lg">.col--md-4_8</span>
+						<span class="hidden--sm hidden--md">.col--lg-8_12</span>
+					</div>
+				</div>
+			</div> <!-- /grid__row -->
+
+			<div class="grid__row hidden--sm hidden--md">
+				<div class="col--lg-5_12">
+					<div class="content">
+						<span>.col--lg-5_12</span>
+					</div>
+				</div>
+				<div class="col--lg-7_12">
+					<div class="content">
+						<span>.col--lg-7_12</span>
+					</div>
+				</div>
+			</div> <!-- /grid__row -->
+
+			<div class="grid__row hidden--sm hidden--md">
+				<div class="col--lg-6_12">
+					<div class="content">
+						<span>.col--lg-6_12</span>
+					</div>
+				</div>
+				<div class="col--lg-6_12">
+					<div class="content">
+						<span>.col--lg-6_12</span>
+					</div>
+				</div>
+			</div> <!-- /grid__row -->
+
+			
+
+
+		</div> <!-- /grid -->
+
+
+
+
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>
