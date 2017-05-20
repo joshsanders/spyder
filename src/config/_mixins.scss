@@ -1,24 +1,4 @@
-@mixin gutter-compensation {
-	margin-right: $grid-gutter-compensation;
-	margin-left: $grid-gutter-compensation;
-}
-@mixin flex-container {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-}
-@mixin flex-column {
-	padding: 0 $grid-gutter;
-	position: relative;
-	min-height: 1px;
-	flex-grow: 1;
-	flex-shrink: 1;
-}
-
 // mixin for using @include to control style of specific elements at diff. grid ranges
-
 @mixin media-range($range) {
 	@if $range == sm {
 		@media screen and (max-width: $media-break--sm-max) { 
@@ -35,12 +15,35 @@
 			@content; 
 		}
   	}
-  // @else if $range == xl {
-  //   @media screen and (min-width: $grid-size--lg) { 
-  //   	@content; 
-  //   }
-  // }
 }
 
+@mixin gutter-compensation {
+	margin-right: $grid-gutter-compensation; //fix this to remove extra var and use calc fn on $grid-gutter var
+	margin-left: $grid-gutter-compensation;
 
+	@include media-range(lg) {
+		margin-right: calc(#{$grid-gutter-compensation} - .25rem );
+		margin-left: calc(#{$grid-gutter-compensation} - .25rem );
+	}
+}
+@mixin flex-container {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+@mixin flex-column {
+	display: block;
+	padding: 0 $grid-gutter;
+	position: relative;
+	min-height: 1px;
+	flex-grow: 1;
+	flex-shrink: 1;
+
+	@include media-range(lg) {
+		padding-left: calc(#{$grid-gutter} + .25rem);
+		padding-right: calc(#{$grid-gutter} + .25rem);
+	}
+}
 

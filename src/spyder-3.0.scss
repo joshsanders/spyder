@@ -1,13 +1,14 @@
 // Variables
-
 @import "config/variables";
 @import	"config/mixins";
 
 
-.grid * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .grid {
 	width: $grid-width;
@@ -16,15 +17,16 @@
 	position: relative;
 	padding-left: $grid-gutter;
 	padding-right: $grid-gutter;
+
+	@include media-range(lg) {
+		padding-right: calc(#{$grid-gutter} * 2);
+		padding-left: calc(#{$grid-gutter} * 2);
+	}
 }
 .grid__row { 
 	@include gutter-compensation;
+	@include flex-container;
 	margin-bottom: $grid-spacing--vert-1;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
 	-webkit-flex-flow: row nowrap;
 	flex-flow: row nowrap;
 
@@ -32,18 +34,22 @@
 		margin-bottom: 0;
 	}
 }
-.grid__col {
-	@include flex-column;
-}
 
-// @media #{$media-range--sm}
+// ??? MAKE THIS IN EACH MEDIA-RANGE INSTEAD ??? 
+
+// .grid__col {
+// 	@include flex-column;
+// }
+
 @include media-range(sm) {
+
  	.col--sm {
  		@include flex-column;
 		
  	}
  	.grid__row {
-		flex-direction: column;
+		-webkit-flex-flow: column wrap;
+		flex-flow: column wrap;
 
 		.col--sm {
 			max-width: 100%;
@@ -57,8 +63,12 @@
 		display: none;
 	}
 }
-// @media #{$media-range--md}
+
 @include media-range(md) {
+	// .col--md {
+	// 	@include flex-column;
+	// }
+
 	.col--md-1_8 {
 		@include flex-column;
 		max-width: 12.5%;
@@ -103,7 +113,7 @@
 		display: none;
 	}
 }
-// @media #{$media-range--lg}
+
 @include media-range(lg) {
 	.col--lg-1_12 {
 		@include flex-column;

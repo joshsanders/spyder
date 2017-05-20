@@ -16,6 +16,7 @@
 
 
 // LAYOUT
+@import	"layout/hero";
 // @import "layout/grid"; /* currently linked in <head> of demo.html as external spyder-3.0.css */
 // @import "layout/header";
 // @import "layout/footer";
@@ -35,78 +36,88 @@
 // @import "js-hooks/...";
 
 
-.hero {
-	height:	100vh;
-	max-height: 100vh;
-	background: $color--char-1;
-	// color: $color--white;
 
-    box-shadow: inset 0 0 50px 0px rgba(0,0,0,.35);
 
-    @include flex-container;
-    flex-direction: row;
+.section-title {
+    font-weight: 600;
+    font-family: 'titillium web', sans-serif;
+
+	.meta-title {
+	    font-size: 50%;
+	    text-transform: lowercase;
+	    letter-spacing: .05em;
+	    color: $color--smoke-1;
+	}
 }
-.hero-content {
-    text-align: center;
-    align-self: center;
-    flex-grow: 1;
-    color: $color--steel-1;
-
-    .hero__symbol {
-    	width: 6rem;
-    }
-    .hero__title {
-	    margin: 1rem 0;
-	    color: #ffffff;
-	    text-transform: uppercase;
-	    font-weight: 600;
-	    letter-spacing: .15em;
-	    font-family: 'titillium web', sans-serif;
-
-	    .letter-e {
-			display: inline-block;
-		    height: 37px;
-		    position: relative;
-		    width: 26px;
-		    margin: 0 -10px 0 -16px;
-
-	    	.top {
-			    display: block;
-			    width: 100%;
-			    height: 5px;
-			    background: $color--primary;
-			    position: absolute;
-			    top: 0;
-			    left: 0;
-	    	}
-	    	.mid {
-			    display: block;
-			    width: 75%;
-			    height: 5px;
-			    background: $color--primary;
-			    position: absolute;
-			    top: calc(50% - 3px);
-			    left: 0;
-	    	}
-	    	.bottom {
-			    display: block;
-			    width: 100%;
-			    height: 5px;
-			    background: $color--primary;
-			    position: absolute;
-			    bottom: 0;
-			    left: 0;
-	    	}
-	    }
-    }
-    .hero__descrip {
-    	margin: 0;
-    	color: $color--steel-1;
-    }
-    .hero__actions {
-    	margin-top: 2rem;
-    }
+.code--inline {
+	font-family: $font-family--mono;
+   	padding: 3px 7px 2px 5px;
+    border: 1px solid rgba(192, 192, 201, .5);
+    background: #f0f0f9;
+    border-radius: 2px;
+    font-size: .9375em;
+    white-space: nowrap;
 }
+
+
+
+.code-container {
+    border: 1px solid #c0c0c9;
+    border-radius: 2px;
+  	position: relative;
+  	background: $color--smoke-2;
+
+  	&:before {
+	    font-family: $font-family--sans;
+	    font-size: 13px;
+	    letter-spacing: .04em;
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    padding: 10px 0;
+	    width: 60px;
+	    text-align: center;
+	    border-top-right-radius: 2px;
+	    background: #f0f0f9;
+	    color: #909099;
+	    border-left: 1px solid #c0c0c9;
+	    border-bottom: 1px solid #c0c0c9;
+	}
+
+  	&.--html:before {
+		content: "HTML";
+	}
+}
+.code--block {
+    display: block;
+    width: 100%;
+    font-family: $font-family--mono;
+    line-height: 20px;
+    padding: 18px;
+    color: #606069;
+    font-size: .9375rem;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+
+.indent {
+	margin-left: 30px;
+}
+code .attribute {
+	color: #5995f7;
+	display: inline-block;
+}
+code .value {
+	color: #ff5933;
+	display: inline-block;
+}
+
+
+
+
+
+
 
 
 .grid {
@@ -139,6 +150,8 @@
 		background: $color--blue;
 	}
 }
+
+
 
 /*
 ======================================================= 

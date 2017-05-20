@@ -18,7 +18,7 @@
 
 		<header class="hero">
 			<div class="hero-content">
-				<object class="hero__symbol" type="image/svg+xml" data="img/symbol--hero.svg"></object>
+				<object class="hero__symbol" type="image/svg+xml" data="img/hero__symbol--opt.svg"></object>
 				<h2 class="hero__title">Spyd
 					<span class="letter-e">
 						<span class="top"></span>
@@ -29,14 +29,52 @@
 				</h2>
 				<h4 class="hero__descrip">A customizable, fluid CSS grid system for creating responsive layouts</h4>
 				
-
 				<div class="hero__actions">
-					<a class="github-button" href="https://github.com/joshsanders/spyder" data-icon="octicon-star" data-size="large" aria-label="Star joshsanders/spyder on GitHub">Star</a>
-					<a class="github-button" href="https://github.com/joshsanders/spyder/fork" data-size="large" aria-label="Fork joshsanders/spyder on GitHub">Fork</a>
-					<a class="github-button" href="https://github.com/joshsanders/spyder" data-icon="octicon-cloud-download" data-size="large" aria-label="Download Spyder">Download</a>
+					<div class="btn-wrap">
+						<a class="github-button btn-override" href="https://github.com/joshsanders/spyder" data-icon="octicon-star" data-size="large" aria-label="Star joshsanders/spyder on GitHub">Star</a>
+					</div>
+					<div class="btn-wrap">
+						<a class="github-button" href="https://github.com/joshsanders/spyder/fork" data-size="large" aria-label="Fork joshsanders/spyder on GitHub">Fork</a>
+					</div>
+					<div class="btn-wrap">
+						<a class="github-button" href="https://github.com/joshsanders/spyder" data-icon="octicon-cloud-download" data-size="large" aria-label="Download Spyder">Download</a>
+					</div>
 				</div>
 			</div>
 		</header>
+
+		<section class="">
+			<div class="grid">
+				<div class="grid__row">
+					<div class="col--sm col--md-full col--lg-6_12">
+						<h3 class="section-title">Simple Structure</h3>
+						<p>Implementing the grid is very straightforward as it is comprised of just three layers. The first layer is the <code class="code--inline">.grid</code> element, which serves as the parent container for the entire grid.</p>
+					</div>
+				</div> <!-- /grid__row-->
+
+				<div class="grid__row">
+					<div class="col--sm col--md-full col--lg-full">
+						<pre class="code-container --html">
+							<code class="code--block">
+								&lt;form&gt;<br>
+									<span class="indent"></span>&lt;div class="input-wrap"&gt;<br>
+									<span class="indent"></span><span class="indent"></span>&lt;input name="" type="[text], [password], or [email]"&gt;<br>
+									<span class="indent"></span><span class="indent"></span>&lt;span class="placeholder-shift"&gt;Your label goes here&lt;/span&gt;<br>
+									<span class="indent"></span><span class="indent"></span>&lt;span class="border-grow"&gt;&lt;/span&gt;<br>
+									<span class="indent"></span>&lt;/div&gt;<br>
+									<span class="indent"></span>&lt;div class="input-wrap"&gt;<br>
+									<span class="indent"></span><span class="indent"></span>&lt;input name="" type="[text], [password], or [email]"&gt;<br>
+									<span class="indent"></span><span class="indent"></span>&lt;span class="placeholder-shift"&gt;Another label&lt;/span&gt;<br>
+									<span class="indent"></span><span class="indent"></span>&lt;span class="border-grow"&gt;&lt;/span&gt;<br>
+									<span class="indent"></span>&lt;/div&gt;<br>
+									&lt;/form&gt;
+							</code>
+						</pre>
+					</div>
+				</div>
+			</div>
+			
+		</section>
 		
 		<!-- 12 col grid @ lg media-range -->
 		<div class="grid">

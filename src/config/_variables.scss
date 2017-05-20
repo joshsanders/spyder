@@ -1,9 +1,9 @@
 // grid configuration
 $grid-width: 100%;
 $grid-max-width: 1440px;
-$grid-gutter: .75rem;
-$grid-gutter--sm: .5rem;
+$grid-gutter: .5rem;
 $grid-gutter-compensation: calc(#{$grid-gutter} * -1);
+// matches vertical spacing between .grid__rows to the size of $grid-gutter as a default
 $grid-spacing--vert-1: calc(#{$grid-gutter} * 2);
 
 // media breakpoints
@@ -21,4 +21,5 @@ $media-range--lg: "screen and (min-width: #{$media-break--lg-min})";
 //   --gutter: .75rem;
 //   --gutter-compensation: calc(var(--gutter) * -1);
 // }
+
 
