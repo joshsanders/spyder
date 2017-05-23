@@ -22,8 +22,8 @@
 	margin-left: $grid-gutter-compensation;
 
 	@include media-range(lg) {
-		margin-right: calc(#{$grid-gutter-compensation} - .25rem );
-		margin-left: calc(#{$grid-gutter-compensation} - .25rem );
+		margin-right: $grid-gutter-compensation - .25rem ;
+		margin-left: $grid-gutter-compensation - .25rem ;
 	}
 }
 @mixin flex-container {
@@ -42,8 +42,8 @@
 	flex-shrink: 1;
 
 	@include media-range(lg) {
-		padding-left: calc(#{$grid-gutter} + .25rem);
-		padding-right: calc(#{$grid-gutter} + .25rem);
+		padding-left: $grid-gutter + .25rem;
+		padding-right: $grid-gutter + .25rem;
 	}
 }
 

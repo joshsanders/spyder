@@ -6,7 +6,7 @@
 		<title>Spyder—An adaptable, fluid CSS grid system</title>
 		<!-- insert Google web fonts link here -->
 		<link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-		<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+		<!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
 		<!-- <link href="animate.css" rel="stylesheet" type="text/css"> -->
 		<!-- <link href="example.css" rel="stylesheet" type="text/css"> -->
 
@@ -48,33 +48,79 @@
 				<div class="grid__row">
 					<div class="col--sm col--md-full col--lg-6_12">
 						<h3 class="section-title">Simple Structure</h3>
-						<p>Implementing the grid is very straightforward as it is comprised of just three layers. The first layer is the <code class="code--inline">.grid</code> element, which serves as the parent container for the entire grid.</p>
+						<p>Implementing the grid is very straightforward and requires just three layers.</p>
+
+						<p>1) <code class="code--inline">.grid</code> &ndash; Serves as the parent container for the entire grid.</p>
+
+						<p>2) <code class="code--inline">.grid__row</code> &ndash; Helps set the vertical rhythym of layouts. This layer should <strong>always</strong> be placed within the <code class="code--inline">.grid</code> element.</p>
+
+						<p>3) <code class="code--inline">.grid__col</code> or <code class="code--inline">.col--[x]-[y_z]</code> &ndash; Use columns to build and control the horizontal flow of layouts. Columns should <strong>always</strong> be placed within the <code class="code--inline">.grid__row</code> element. <em>** It's important to note there are two syntax variations for columns&mdash;both will be explained in detail in the following section.</em></p>
+
+						<p></p>
+
+						<!-- <p>The first layer is the <code class="code--inline">.grid</code> element, which serves as the parent container for the entire grid.</p>
+
+						<p>The next layer is the <code class="code--inline">.grid__row</code> element, which helps set the vertical rhythym of layouts. This layer should <strong>always</strong> be placed within the <code class="code--inline">.grid</code> element.</p>
+
+						<p>The last layer of the grid is the columns layer. Columns makes up the heart of the grid, and are the containers in which you will place any content that you want aligned to the grid.</p> -->
 					</div>
-				</div> <!-- /grid__row-->
+				</div> <!-- /grid__row -->
 
 				<div class="grid__row">
 					<div class="col--sm col--md-full col--lg-full">
-						<pre class="code-container --html">
-							<code class="code--block">
-								&lt;form&gt;<br>
-									<span class="indent"></span>&lt;div class="input-wrap"&gt;<br>
-									<span class="indent"></span><span class="indent"></span>&lt;input name="" type="[text], [password], or [email]"&gt;<br>
-									<span class="indent"></span><span class="indent"></span>&lt;span class="placeholder-shift"&gt;Your label goes here&lt;/span&gt;<br>
-									<span class="indent"></span><span class="indent"></span>&lt;span class="border-grow"&gt;&lt;/span&gt;<br>
+						<div class="code-wrap code-wrap--html">
+							<code>
+								&lt;div class="grid"&gt;<br>
+									<span class="indent"></span>&lt;div class="grid__row"&gt;<br>
+										<span class="indent--2x"></span>&lt;div class="grid__col"&gt;<br>
+											<span class="indent--3x"></span><em>...Your site content goes here</em><br>
+										<span class="indent--2x"></span>&lt;/div&gt;<br>
 									<span class="indent"></span>&lt;/div&gt;<br>
-									<span class="indent"></span>&lt;div class="input-wrap"&gt;<br>
-									<span class="indent"></span><span class="indent"></span>&lt;input name="" type="[text], [password], or [email]"&gt;<br>
-									<span class="indent"></span><span class="indent"></span>&lt;span class="placeholder-shift"&gt;Another label&lt;/span&gt;<br>
-									<span class="indent"></span><span class="indent"></span>&lt;span class="border-grow"&gt;&lt;/span&gt;<br>
-									<span class="indent"></span>&lt;/div&gt;<br>
-									&lt;/form&gt;
+								&lt;/div&gt;
 							</code>
-						</pre>
+						</div>
+
+						<!-- <p class="callout callout--info">NOTE: Spyder utilizes the BEM naming convention to help keep the relationships between elements understandable at a glance.</p> -->
+					</div>
+				</div>
+
+			</div> <!-- /grid -->
+		</section>
+
+		<section class="">
+			<div class="grid">
+				<div class="grid__row">
+					<div class="col--sm col--md-full col--lg-6_12">
+						<h3 class="section-title">Fluid Responsiveness</h3>
+						<p>Spyder is based on the flexbox module and uses percent based widths. This allows for fluid resizing of columns and rows.</p>
+
+						<p>As mentioned in the Structure section above</p>
 					</div>
 				</div>
 			</div>
-			
 		</section>
+
+
+		<!-- ================= -->
+		<!-- OFFSETS -->
+		<!-- ================= -->
+
+		<!-- ================= -->
+		<!-- NESTING -->
+		<!-- ================= -->
+
+		<!-- ================= -->
+		<!-- ALIGNMENT -->
+		<!-- ================= -->
+
+		<!-- ================= -->
+		<!-- REORDERING -->
+		<!-- ================= -->
+
+		<!-- ================= -->
+		<!-- REVERSING -->
+		<!-- ================= -->
+
 		
 		<!-- 12 col grid @ lg media-range -->
 		<div class="grid">

@@ -17,27 +17,28 @@
 }
 @media screen and (min-width: 68.8125rem) {
   .grid {
-    padding-right: calc(0.5rem * 2);
-    padding-left: calc(0.5rem * 2);
+    width: 98%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
   }
 }
 
 .grid__row {
-  margin-right: calc(0.5rem * -1);
-  margin-left: calc(0.5rem * -1);
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: calc(0.5rem * 2);
+  margin-bottom: 1rem;
   -webkit-flex-flow: row nowrap;
   flex-flow: row nowrap;
 }
 @media screen and (min-width: 68.8125rem) {
   .grid__row {
-    margin-right: calc(calc(0.5rem * -1) - .25rem );
-    margin-left: calc(calc(0.5rem * -1) - .25rem );
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
   }
 }
 .grid__row .grid__row {
@@ -56,8 +57,8 @@
 }
 @media screen and (max-width: 48rem) and (min-width: 68.8125rem) {
   .col--sm {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -71,7 +72,7 @@
     flex-basis: 100%;
   }
   .grid__row .col--sm:not(:first-of-type) {
-    margin-top: calc(0.5rem * 2);
+    margin-top: 1rem;
   }
 
   .hidden--sm {
@@ -92,8 +93,8 @@
 }
 @media screen and (min-width: 48.0625rem) and (max-width: 68.75rem) and (min-width: 68.8125rem) {
   .col--md-1_8 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -111,8 +112,8 @@
 }
 @media screen and (min-width: 48.0625rem) and (max-width: 68.75rem) and (min-width: 68.8125rem) {
   .col--md-2_8 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -130,8 +131,8 @@
 }
 @media screen and (min-width: 48.0625rem) and (max-width: 68.75rem) and (min-width: 68.8125rem) {
   .col--md-3_8 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -149,8 +150,8 @@
 }
 @media screen and (min-width: 48.0625rem) and (max-width: 68.75rem) and (min-width: 68.8125rem) {
   .col--md-4_8 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -168,8 +169,8 @@
 }
 @media screen and (min-width: 48.0625rem) and (max-width: 68.75rem) and (min-width: 68.8125rem) {
   .col--md-5_8 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -187,8 +188,8 @@
 }
 @media screen and (min-width: 48.0625rem) and (max-width: 68.75rem) and (min-width: 68.8125rem) {
   .col--md-6_8 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -206,8 +207,8 @@
 }
 @media screen and (min-width: 48.0625rem) and (max-width: 68.75rem) and (min-width: 68.8125rem) {
   .col--md-7_8 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -225,8 +226,8 @@
 }
 @media screen and (min-width: 48.0625rem) and (max-width: 68.75rem) and (min-width: 68.8125rem) {
   .col--md-full {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -249,8 +250,8 @@
 }
 @media screen and (min-width: 68.8125rem) and (min-width: 68.8125rem) {
   .col--lg-1_12 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -268,8 +269,8 @@
 }
 @media screen and (min-width: 68.8125rem) and (min-width: 68.8125rem) {
   .col--lg-2_12 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -287,8 +288,8 @@
 }
 @media screen and (min-width: 68.8125rem) and (min-width: 68.8125rem) {
   .col--lg-3_12 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -306,8 +307,8 @@
 }
 @media screen and (min-width: 68.8125rem) and (min-width: 68.8125rem) {
   .col--lg-4_12 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -325,8 +326,8 @@
 }
 @media screen and (min-width: 68.8125rem) and (min-width: 68.8125rem) {
   .col--lg-5_12 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -344,8 +345,8 @@
 }
 @media screen and (min-width: 68.8125rem) and (min-width: 68.8125rem) {
   .col--lg-6_12 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -363,8 +364,8 @@
 }
 @media screen and (min-width: 68.8125rem) and (min-width: 68.8125rem) {
   .col--lg-7_12 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -382,8 +383,8 @@
 }
 @media screen and (min-width: 68.8125rem) and (min-width: 68.8125rem) {
   .col--lg-8_12 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -401,8 +402,8 @@
 }
 @media screen and (min-width: 68.8125rem) and (min-width: 68.8125rem) {
   .col--lg-9_12 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -420,8 +421,8 @@
 }
 @media screen and (min-width: 68.8125rem) and (min-width: 68.8125rem) {
   .col--lg-10_12 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -439,8 +440,8 @@
 }
 @media screen and (min-width: 68.8125rem) and (min-width: 68.8125rem) {
   .col--lg-11_12 {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -458,8 +459,8 @@
 }
 @media screen and (min-width: 68.8125rem) and (min-width: 68.8125rem) {
   .col--lg-full {
-    padding-left: calc(0.5rem + .25rem);
-    padding-right: calc(0.5rem + .25rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 

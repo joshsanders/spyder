@@ -2,9 +2,9 @@
 $grid-width: 100%;
 $grid-max-width: 1440px;
 $grid-gutter: .5rem;
-$grid-gutter-compensation: calc(#{$grid-gutter} * -1);
+$grid-gutter-compensation: $grid-gutter * -1;
 // matches vertical spacing between .grid__rows to the size of $grid-gutter as a default
-$grid-spacing--vert-1: calc(#{$grid-gutter} * 2);
+$grid-spacing--vert-1: $grid-gutter * 2;
 
 // media breakpoints
 $media-break--sm-max: 48rem;		//768px @ base-16

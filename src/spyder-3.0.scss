@@ -19,8 +19,9 @@
 	padding-right: $grid-gutter;
 
 	@include media-range(lg) {
-		padding-right: calc(#{$grid-gutter} * 2);
-		padding-left: calc(#{$grid-gutter} * 2);
+		width: $grid-width - 2%;
+		padding-right: $grid-gutter + .25rem;
+		padding-left: $grid-gutter + .25rem;
 	}
 }
 .grid__row { 
@@ -178,11 +179,20 @@
 	.hidden--lg {
 		display: none;
 	}
+
+	// .col--lg-1_12
+
+	// .col--lg-10_12
+
+	// .offset--lg-7_12
+
+	// .push--md-4_8
+
+	// .first-col--sm
+
+	// .col--lg-last
 }
 /* --- Specific grid based column sizes ------------ */
-
-
-
 
 
 

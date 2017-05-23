@@ -4,13 +4,12 @@
 // @import "config/media-queries"; /* MQs go here??? */
 
 // VENDOR
-@import "vendor/normalize";
 @import "vendor/animate";
-
 @import "../../src/spyder-3.0";
 
 // BASE
 @import "base/reset";
+@import "vendor/normalize";
 @import "base/typography";
 // @import "base/color";
 
@@ -22,6 +21,7 @@
 // @import "layout/footer";
 
 // COMPONENTS
+@import "components/code";
 // @import "components/buttons";
 // @import "components/navigation";
 // @import "components/inputs";
@@ -37,9 +37,12 @@
 
 
 
+body {
+	background: #eeeeee;
+}
 
 .section-title {
-    font-weight: 600;
+    font-weight: 700;
     font-family: 'titillium web', sans-serif;
 
 	.meta-title {
@@ -49,72 +52,16 @@
 	    color: $color--smoke-1;
 	}
 }
-.code--inline {
-	font-family: $font-family--mono;
-   	padding: 3px 7px 2px 5px;
-    border: 1px solid rgba(192, 192, 201, .5);
-    background: #f0f0f9;
-    border-radius: 2px;
-    font-size: .9375em;
-    white-space: nowrap;
+
+.callout {
+	border: 1px solid;
+	border-left: 4px solid;
+	border-color: $color--steel-1;
+	color: $color--steel-1;
+	padding: .5rem;
+	margin: 1.3rem 0;
+	@include border-radius(2px);
 }
-
-
-
-.code-container {
-    border: 1px solid #c0c0c9;
-    border-radius: 2px;
-  	position: relative;
-  	background: $color--smoke-2;
-
-  	&:before {
-	    font-family: $font-family--sans;
-	    font-size: 13px;
-	    letter-spacing: .04em;
-	    position: absolute;
-	    top: 0;
-	    right: 0;
-	    padding: 10px 0;
-	    width: 60px;
-	    text-align: center;
-	    border-top-right-radius: 2px;
-	    background: #f0f0f9;
-	    color: #909099;
-	    border-left: 1px solid #c0c0c9;
-	    border-bottom: 1px solid #c0c0c9;
-	}
-
-  	&.--html:before {
-		content: "HTML";
-	}
-}
-.code--block {
-    display: block;
-    width: 100%;
-    font-family: $font-family--mono;
-    line-height: 20px;
-    padding: 18px;
-    color: #606069;
-    font-size: .9375rem;
-    white-space: nowrap;
-    overflow-x: scroll;
-}
-
-
-.indent {
-	margin-left: 30px;
-}
-code .attribute {
-	color: #5995f7;
-	display: inline-block;
-}
-code .value {
-	color: #ff5933;
-	display: inline-block;
-}
-
-
-
 
 
 
