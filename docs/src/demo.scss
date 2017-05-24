@@ -42,7 +42,7 @@ body {
 }
 
 .section-title {
-    font-weight: 700;
+    font-weight: 900;
     font-family: 'titillium web', sans-serif;
 
 	.meta-title {
@@ -63,7 +63,69 @@ body {
 	@include border-radius(2px);
 }
 
+li {
+	.rotate-90 {
+		transform: translate(0%, 20%) scale(1, -1);
+		display: inline-block;
+		margin-right: .25em;
+	}
+}
+h4 {
+	.code--inline {
+		margin-left: .25em;
+	}
+}
+#columns {
+	.btn-wrap {
+		-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	    justify-content: center;
 
+	    margin: 2.5rem;
+
+	    @include media-range(sm) {
+			-webkit-flex-flow: row wrap;
+			flex-flow: row wrap;
+	    }
+
+		.btn {
+			border: 1px solid $color--smoke-1;
+			padding: .5em 1em;
+			margin-right: -1px;
+			transition: border-color .2s ease-out;
+
+			&:hover,
+			&:active {
+				// background: lighten($color--smoke-1, 10%);
+				border-color: darken($color--smoke-1, 24%);
+				z-index: 10;
+			}
+			&:active {
+				box-shadow: inset 0 0 10px rgba( darken($color--smoke-1, 10%), .64);
+			}
+
+			@include media-range(sm) {
+				flex-grow: 1;
+			}
+		}
+		.btn--add {
+
+		}
+		.btn--remove {
+
+		}
+	}
+	.code-wrap {
+		.target {
+			padding-top: .125em;
+			display: block;
+
+			div {
+				line-height: 1.85em;
+			}
+		}
+	}
+}
 
 
 
@@ -76,9 +138,9 @@ body {
 	// padding-top: 1rem;
 	// padding-bottom: 1rem;
 }
-.grid__col {
+/* .grid__col {
 	transition: all .2s ease-in;
-}
+} */
 .content {
     text-align: center;
     margin: 0px;
@@ -97,201 +159,3 @@ body {
 		background: $color--blue;
 	}
 }
-
-
-
-/*
-======================================================= 
-Structure Diagram styles
-======================================================= 
-*/
-// .diagram {
-// 	position: relative;
-// 	border: 1px solid #909099;
-// 	color: #909099;
-// 	padding: 40px 20px 10px;
-// }
-// .diagram .content-wrap {
-// 	position: relative;
-// 	border: 1px solid rgb(15, 174, 65);
-// 	color: rgb(15, 174, 65);
-// 	padding: 40px 20px 10px;
-// 	margin: 30px auto 0;
-// 	width: 100%;
-// }
-// .diagram .content-wrap .row {
-// 	position: relative;
-// 	border: 1px solid rgb(21, 107, 219);
-// 	color: rgb(21, 107, 219);
-// 	padding: 40px 20px 10px;
-// 	margin: 30px 0 0;
-// }
-// .diagram .content-wrap .row .lg-col-6,
-// .diagram .content-wrap .row .md-col-2,
-// .diagram .content-wrap .row .sm-col-2 {
-// 	position: relative;
-// 	border: 1px solid rgb(253, 59, 59);
-// 	color: rgb(253, 59, 59);
-// 	padding-top: 40px;
-// 	padding-bottom: 20px;
-// 	margin: 30px 0 0;
-// }
-// *[title]::before {
-// 	position: absolute;
-// 	top: -1px;
-// 	left: -1px;
-// 	padding: 4px 6px;
-// 	border: 1px solid;
-// 	color: inherit;
-// 	font-size: 13px;
-// 	letter-spacing: .02em;
-
-// }
-// [data-label="element"]::before {
-// 	content: 'Main Element: header, section, div etc.';
-// }
-// [data-label="content-wrap"]::before {
-// 	content: '.content-wrap';
-// }
-// [data-label="row"]::before {
-// 	content: '.row';
-// }
-// [data-label="x-col-y"]::before {
-// 	content: '.x-col-y';
-// }
-
-/*
-======================================================= 
-Structure Code Example Styles
-======================================================= 
-*/
-// .code-wrapper {
-// 	background: #303039;
-// 	border-radius: 2px;
-// }
-// .code-wrapper code {
-// 	position: relative;
-// 	display: block;
-// 	width: 100%;
-// 	font-size: 13px;
-// 	font-family: 'Inconsolata', monospace;
-// 	line-height: 18px;
-// 	padding: 18px;
-// 	color: #c0c0c9;
-// }
-// code::before {
-// 	font-family: 'Lato', sans-serif;
-// 	font-size: 13px;
-// 	letter-spacing: .04em;
-// 	position: absolute;
-// 	top: 0;
-// 	right: 0;
-// 	padding: 10px 0;
-// 	width: 60px;
-// 	text-align: center;
-// 	border-top-right-radius: 1px;
-// 	background: #202029;
-// 	color: #c0c0c9;
-// 	border-left: 1px solid #606069;
-// 	border-bottom: 1px solid #606069;
-// }
-// code.html::before {
-// 	content: "HTML";
-// }
-// code.css::before {
-// 	content: "CSS";
-// }
-// code .selector {
-// 	color: #ff6a57;
-// }
-// code .indent {
-// 	margin-left: 25px;
-// }
-// code .tag {
-
-// }
-// code .title {
-
-// }
-// code .attribute {
-// 	color: #57bcff;
-// }
-// code .value {
-// 	color: #ff6a57;
-// 	color: rgb(253, 59, 59);
-// }
-
-
-/*
---------------------------------------
-sm-col breakpoint
-Full-width Columns
---------------------------------------
-*/
-// @media screen and (max-width: 48rem) {
-/* @media screen and (max-width: 768px) */
-
-// .gutter-add--left {
-// 	padding-left: .8%;
-// }
-// .gutter-add--right {
-// 	padding-right: .8%;
-// }
-
-
-// } /* end sm */
-
-/*
---------------------------------------
-md-col breakpoint
-8 Column Grid
---------------------------------------
-*/
-// @media screen and (min-width: 48.0625rem) and (max-width: 68.6875rem) {
-// @media screen and (min-width: 769px) and (max-width: 1100px)
-
-// .gutter-add--left {
-// 	padding-left: .65%;
-// }
-// .gutter-add--right {
-// 	padding-right: .65%;
-// }
-
-
-// } /* end md */
-
-/*
---------------------------------------
-lg-col breakpoint
-12 Column Grid
---------------------------------------
-*/
-// @media screen and (min-width: 68.75rem) {
-// @media screen and (min-width: 1101px)
-
-// .gutter-add--left {
-// 	padding-left: .5%;
-// }
-// .gutter-add--right {
-// 	padding-right: .5%;
-// }
-
-
-// } /* end lg-col*/
-
-
-/*
---------------------------------------
-xl-col breakpoint
-12 Column Grid
---------------------------------------
-*/
-/*@media screen and (min-width: 81.25rem) {
-p {
-	background: rgb(253, 59, 59);
-}
-.xl-vis {
-	display: block;
-}
-
-}*/

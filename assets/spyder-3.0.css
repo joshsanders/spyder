@@ -32,8 +32,8 @@
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1rem;
-  -webkit-flex-flow: row nowrap;
-  flex-flow: row nowrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 @media screen and (min-width: 68.8125rem) {
   .grid__row {
@@ -45,18 +45,16 @@
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 48rem) {
-  .col--sm {
-    display: block;
-    padding: 0 0.5rem;
-    position: relative;
-    min-height: 1px;
-    flex-grow: 1;
-    flex-shrink: 1;
-  }
+.grid__col {
+  display: block;
+  padding: 0 0.5rem;
+  position: relative;
+  min-height: 1px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
-@media screen and (max-width: 48rem) and (min-width: 68.8125rem) {
-  .col--sm {
+@media screen and (min-width: 68.8125rem) {
+  .grid__col {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }
@@ -68,9 +66,24 @@
     flex-flow: column wrap;
   }
   .grid__row .col--sm {
+    display: block;
+    padding: 0 0.5rem;
+    position: relative;
+    min-height: 1px;
+    flex-grow: 1;
+    flex-shrink: 1;
     max-width: 100%;
     flex-basis: 100%;
   }
+}
+@media screen and (max-width: 48rem) and (min-width: 68.8125rem) {
+  .grid__row .col--sm {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .grid__row .grid__col:not(:first-of-type),
   .grid__row .col--sm:not(:first-of-type) {
     margin-top: 1rem;
   }

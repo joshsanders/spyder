@@ -2767,8 +2767,8 @@ Copyright (c) 2014 Daniel Eden
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1rem;
-  -webkit-flex-flow: row nowrap;
-  flex-flow: row nowrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 @media screen and (min-width: 68.8125rem) {
   .grid__row {
@@ -2780,18 +2780,16 @@ Copyright (c) 2014 Daniel Eden
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 48rem) {
-  .col--sm {
-    display: block;
-    padding: 0 0.5rem;
-    position: relative;
-    min-height: 1px;
-    flex-grow: 1;
-    flex-shrink: 1;
-  }
+.grid__col {
+  display: block;
+  padding: 0 0.5rem;
+  position: relative;
+  min-height: 1px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
-@media screen and (max-width: 48rem) and (min-width: 68.8125rem) {
-  .col--sm {
+@media screen and (min-width: 68.8125rem) {
+  .grid__col {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }
@@ -2803,9 +2801,24 @@ Copyright (c) 2014 Daniel Eden
     flex-flow: column wrap;
   }
   .grid__row .col--sm {
+    display: block;
+    padding: 0 0.5rem;
+    position: relative;
+    min-height: 1px;
+    flex-grow: 1;
+    flex-shrink: 1;
     max-width: 100%;
     flex-basis: 100%;
   }
+}
+@media screen and (max-width: 48rem) and (min-width: 68.8125rem) {
+  .grid__row .col--sm {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .grid__row .grid__col:not(:first-of-type),
   .grid__row .col--sm:not(:first-of-type) {
     margin-top: 1rem;
   }
@@ -3841,7 +3854,7 @@ small, .font--small {
   border: 1px solid rgba(192, 192, 201, 0.75);
   background: #fff;
   border-radius: 2px;
-  font-size: .9375em;
+  font-size: .9375rem;
   white-space: nowrap;
 }
 
@@ -3872,6 +3885,9 @@ small, .font--small {
 .code-wrap--html:before {
   content: "HTML";
 }
+.code-wrap--css:before {
+  content: "CSS";
+}
 .code-wrap code {
   font-family: "Consolas", monospace;
   font-size: .875rem;
@@ -3898,7 +3914,7 @@ body {
 }
 
 .section-title {
-  font-weight: 700;
+  font-weight: 900;
   font-family: 'titillium web', sans-serif;
 }
 .section-title .meta-title {
@@ -3918,15 +3934,62 @@ body {
   border-radius: 2px;
 }
 
+li .rotate-90 {
+  transform: translate(0%, 20%) scale(1, -1);
+  display: inline-block;
+  margin-right: .25em;
+}
+
+h4 .code--inline {
+  margin-left: .25em;
+}
+
+#columns .btn-wrap {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 2.5rem;
+}
+@media screen and (max-width: 48rem) {
+  #columns .btn-wrap {
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+}
+#columns .btn-wrap .btn {
+  border: 1px solid #c0c0c9;
+  padding: .5em 1em;
+  margin-right: -1px;
+  transition: border-color .2s ease-out;
+}
+#columns .btn-wrap .btn:hover, #columns .btn-wrap .btn:active {
+  border-color: #7e7e91;
+  z-index: 10;
+}
+#columns .btn-wrap .btn:active {
+  box-shadow: inset 0 0 10px rgba(165, 165, 177, 0.64);
+}
+@media screen and (max-width: 48rem) {
+  #columns .btn-wrap .btn {
+    flex-grow: 1;
+  }
+}
+#columns .code-wrap .target {
+  padding-top: .125em;
+  display: block;
+}
+#columns .code-wrap .target div {
+  line-height: 1.85em;
+}
+
 .grid {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-.grid__col {
-  transition: all .2s ease-in;
-}
-
+/* .grid__col {
+	transition: all .2s ease-in;
+} */
 .content {
   text-align: center;
   margin: 0px;
@@ -3947,50 +4010,5 @@ body {
     background: #2694f3;
   }
 }
-
-/*
-======================================================= 
-Structure Diagram styles
-======================================================= 
-*/
-/*
-======================================================= 
-Structure Code Example Styles
-======================================================= 
-*/
-/*
---------------------------------------
-sm-col breakpoint
-Full-width Columns
---------------------------------------
-*/
-/* @media screen and (max-width: 768px) */
-/*
---------------------------------------
-md-col breakpoint
-8 Column Grid
---------------------------------------
-*/
-/*
---------------------------------------
-lg-col breakpoint
-12 Column Grid
---------------------------------------
-*/
-/*
---------------------------------------
-xl-col breakpoint
-12 Column Grid
---------------------------------------
-*/
-/*@media screen and (min-width: 81.25rem) {
-p {
-	background: rgb(253, 59, 59);
-}
-.xl-vis {
-	display: block;
-}
-
-}*/
 
 /*# sourceMappingURL=demo.css.map */

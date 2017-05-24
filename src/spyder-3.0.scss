@@ -28,8 +28,8 @@
 	@include gutter-compensation;
 	@include flex-container;
 	margin-bottom: $grid-spacing--vert-1;
-	-webkit-flex-flow: row nowrap;
-	flex-flow: row nowrap;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
 
 	.grid__row {
 		margin-bottom: 0;
@@ -38,24 +38,22 @@
 
 // ??? MAKE THIS IN EACH MEDIA-RANGE INSTEAD ??? 
 
-// .grid__col {
-// 	@include flex-column;
-// }
+.grid__col {
+	@include flex-column;
+}
 
 @include media-range(sm) {
 
- 	.col--sm {
- 		@include flex-column;
-		
- 	}
  	.grid__row {
 		-webkit-flex-flow: column wrap;
 		flex-flow: column wrap;
 
 		.col--sm {
+			@include flex-column;
 			max-width: 100%;
 			flex-basis: 100%;
 		}
+		.grid__col:not(:first-of-type),
 		.col--sm:not(:first-of-type) {
 			margin-top: $grid-spacing--vert-1;
 		}

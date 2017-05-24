@@ -5,7 +5,7 @@
     border: 1px solid rgba(192, 192, 201, 0.75);
     background: #fff;
     border-radius: 2px;
-    font-size: .9375em;
+    font-size: .9375rem;
     white-space: nowrap;
 }
 .code-wrap {
@@ -35,6 +35,10 @@
 
   	&--html:before {
 		content: "HTML";
+	}
+
+	&--css:before {
+		content: "CSS";
 	}
 
 	code {

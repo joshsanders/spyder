@@ -1,34 +1,62 @@
 $(document).ready(function() {
 
-	$('.toggles-wrap button').on('click', function() {
-		
-		$('.toggles-wrap button').removeClass('active');
-		$(this).addClass('active');
+	$('.js-btn--addCol').on('click', function(addCol) {
 
-		var toggle = $(this).data('view');
+		var targetRow = $('.js-varyColumns--row'),
+	    	columns = targetRow.children('.grid__col'),
+	    	newColumn = '<div class="grid__col"><div class="content"><span>.grid__col</span></div></div>',
+	    	targetCode = $('.js-varyColumns--code'),
+			newCode = '<div><span class="indent"></span>&lt;div class="grid__col"&gt;&lt;/div&gt;<br></div>';
 
-		$('section').removeClass('is-visible').addClass('animated');
-		$('section[data-view="'+ toggle +'"]').addClass('fadeIn is-visible');		
+	    if (columns.length >= 2 && columns.length != 12) {
+	        targetRow.append(newColumn);
+	        targetCode.children('.target').append(newCode);
+	    }
+	    // else if ($columns.length == 12) {
+	    // 	// throw a warning here
+	    // }
 	});
-	// -------------
-	// STICKY HEADER
-	// -------------
-	// $(window).scroll(function () {
-	// 	var height = $(window).height();
-	// 	var scrollTop = $(window).scrollTop();
 
-	// 	if(scrollTop > 80) {
-	// 		$('.sticky-content').css({ 'position': 'fixed', 'top' : '0' });
-	// 		$('.main-nav').addClass('scroll');
-	// 		$('.showcase, .main-content#contact').not('.showcase#mobile').css('marginTop', '50px');
-	// 	}
-	// 	else {
-	// 		$('.sticky-content').css({ 'position': 'static', 'top': '80px'});
-	// 		$('.main-nav').removeClass('scroll');
-	// 		$('.showcase, .main-content#contact').css('marginTop', '0px');
-	// 	}
-	// });
+	    
+	$('.js-btn--removeCol').on('click', function(removeCol) {
+		var targetRow = $('.js-varyColumns--row'),
+	    	columns = targetRow.children('.grid__col'),
 
+	    	targetCode = $('.js-varyColumns--code'),
+			newCode = '<span class="indent"></span>&lt;div class="grid__col"&gt;&lt;/div&gt;<br>';
+
+	    	// existingColumn = $('.grid__col');
+
+		if (columns.length <= 12 && columns.length != 2) {
+			// console.log('remove btn is clicked');
+
+	        targetRow.children().last().remove();
+	        targetCode.children('.target').children('div').last().remove();
+	    }
+
+	});
+
+
+
+		// function moveButton(elem){
+		//     var $selected = $('#selected');
+		//     var $kids = $selected.children();
+		//     if ($kids.length >= 3)
+		//     {
+		//         $kids.last().remove();
+		//     }
+		//     $(elem).detach().appendTo('#selected');
+		// }
+
+
+
+		// $( document.body ).on('click', function() {
+		// 	$( document.body ).append( $( "<div>" ) );
+		// 	var n = $( "div" ).length;
+		// 	$( "span" ).text( "There are " + n + " divs." +
+		// 	  "Click to add more.");
+		// });
+	
 
 
 
