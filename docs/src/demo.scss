@@ -125,6 +125,13 @@ h4 {
 			}
 		}
 	}
+
+	#col--responsive {
+
+		.grid__row:last-of-type {
+			margin-top: 3rem;
+		}	
+	}
 }
 
 

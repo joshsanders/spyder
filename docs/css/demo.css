@@ -3981,6 +3981,9 @@ h4 .code--inline {
 #columns .code-wrap .target div {
   line-height: 1.85em;
 }
+#columns #col--responsive .grid__row:last-of-type {
+  margin-top: 3rem;
+}
 
 .grid {
   padding-top: 1rem;
