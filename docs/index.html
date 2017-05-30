@@ -54,9 +54,9 @@
 
 						<p><strong> 2)</strong> <code class="code--inline">.grid__row</code> &ndash; Helps set the vertical rhythym of layouts. This layer should <strong>always</strong> be placed within the <code class="code--inline">.grid</code> element.</p>
 
-						<p><strong> 3)</strong> <code class="code--inline">.grid__col</code> or <code class="code--inline">.col--[x]-[y_z]</code> &ndash; Use columns to build and control the horizontal flow of layouts. Columns should <strong>always</strong> be placed within the <code class="code--inline">.grid__row</code> element. <em>** It's important to note there are two syntax variations for columns&mdash;both explained in the 'Column Syntax' section below.</em></p>
+						<p><strong> 3)</strong> <code class="code--inline">.grid__col</code> or <code class="code--inline">.col--[x]-[y_z]</code> &ndash; Use columns to build and control the horizontal flow of layouts. Columns should <strong>always</strong> be placed within the <code class="code--inline">.grid__row</code> element.</p>
 
-						<p></p>
+						<p><strong class="highlight">NOTE:</strong> There are two syntax variations for columns&mdash;both explained in the 'Columns &amp; Syntax' section below.</p>
 
 						<!-- <p>The first layer is the <code class="code--inline">.grid</code> element, which serves as the parent container for the entire grid.</p>
 
@@ -138,7 +138,11 @@
 						<div class="col--sm col--md-6_8 col--lg-6_12">
 							<h4><strong>Auto Columns</strong> <code class="code--inline">.grid__col</code></h4>
 
-							<p>Auto Columns are the most basic implementation of columns, and follow the BEM naming convention that Spyder uses by default. They are fluid in width, but are <strong>only</strong> responsive at small device sizes.</p>
+							<p>Auto Columns are the most basic form of columns, with their syntax following the BEM naming pattern that Spyder uses by default.</p>
+
+							<p><strong class="highlight">NOTE:</strong> Auto Columns are fluid in width, but the only responsive behavior they exhibit is the ability to morph into vertically stacked, full-width columns at small device sizes. Because of this, it's recommended to use Responsive Columns a majority of the time when crafting layouts, and to use Auto Columns sparingly and/or for basic layouts.</p>
+
+							<p>You can explore the behavior of Auto Columns by adding/removing columns below.</p>
 						</div>
 					</div>
 
@@ -156,8 +160,8 @@
 					</div>
 
 					<div class="grid__row btn-wrap">
-						<button class="btn btn--add js-btn--addCol">+ Column</button>
-						<button class="btn btn--remove js-btn--removeCol">&ndash; Column</button>
+						<button class="btn btn--add js-btn--addCol"><span>+</span> Column</button>
+						<button class="btn btn--remove js-btn--removeCol"><span>&ndash;</span> Column</button>
 					</div>
 					
 					<div class="grid__row">
@@ -180,7 +184,7 @@
 						<div class="col--sm col--md-6_8 col--lg-6_12">
 							<h4><strong>Responsive Columns</strong> <code class="code--inline">.col--[x]-[y_z]</code></h4>
 
-							<p>Responsive Columns intro goes here...explain syntax and mention media-ranges with respective gridspaces</p>
+							<p>Responsive Columns are the more powerful version of columns</p>
 						</div>
 					</div>
 
@@ -264,35 +268,35 @@
 							<div class="content">
 								<span class="hidden--md hidden--lg">.sm-col</span>
 								<span class="hidden--sm hidden--lg">.md-col--2_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+								<span class="hidden--sm hidden--md">.col--lg-2_12</span>
 							</div>
 						</div>
 						<div class="hidden--sm col--md-2_8 col--lg-2_12">
 							<div class="content">
 								<span class="hidden--lg">.md-col--2_8</span>
-								<span class="hidden--md">.col--lg-1_12</span>
+								<span class="hidden--md">.col--lg-2_12</span>
 							</div>
 						</div>
 						<div class="hidden--sm col--md-2_8 col--lg-2_12">
 							<div class="content">
 								<span class="hidden--lg">.md-col--2_8</span>
-								<span class="hidden--md">.col--lg-1_12</span>
+								<span class="hidden--md">.col--lg-2_12</span>
 							</div>
 						</div>
 						<div class="hidden--sm col--md-2_8 col--lg-2_12">
 							<div class="content">
 								<span class="hidden--lg">.md-col--2_8</span>
-								<span class="hidden--md">.col--lg-1_12</span>
+								<span class="hidden--md">.col--lg-2_12</span>
 							</div>
 						</div>
 						<div class="hidden--sm hidden--md col--lg-2_12">
 							<div class="content">
-								<span class="">.col--lg-1_12</span>
+								<span class="">.col--lg-2_12</span>
 							</div>
 						</div>
 						<div class="hidden--sm hidden--md col--lg-2_12">
 							<div class="content">
-								<span class="">.col--lg-1_12</span>
+								<span class="">.col--lg-2_12</span>
 							</div>
 						</div>
 					</div> <!-- /grid__row -->
@@ -456,7 +460,14 @@
 						<div class="col--sm col--md-full col--lg-full">
 							<div class="code-wrap code-wrap--html">
 								<code>
-									Responsive Columns example code will go here
+									&lt;div class="grid__row"&gt;<br>
+										<span class="indent"></span>&lt;div class="col--lg-3_12 col--md-2_8 col--sm"&gt;<br>
+											<span class="indent--2x"></span><em>...Column 1</em><br>
+										<span class="indent"></span>&lt;/div&gt;<br>
+										<span class="indent"></span>&lt;div class="col--lg-3_12 col--md-2_8 col--sm"&gt;<br>
+											<span class="indent--2x"></span><em>...Column 2</em><br>
+										<span class="indent"></span>&lt;/div&gt;<br>
+									&lt;/div&gt; <br>
 								</code>
 							</div>
 						</div>

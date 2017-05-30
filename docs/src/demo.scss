@@ -80,8 +80,7 @@ h4 {
 		-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	    justify-content: center;
-
-	    margin: 2.5rem;
+		margin: 2.5rem;
 
 	    @include media-range(sm) {
 			-webkit-flex-flow: row wrap;
@@ -108,13 +107,19 @@ h4 {
 				flex-grow: 1;
 			}
 		}
-		.btn--add {
 
+		.btn--add span,
+		.btn--remove span {
+			color: $color--primary;
+		    font-weight: 900;
+		    font-size: 1.125em;
+		    margin-right: .25em;
 		}
 		.btn--remove {
 
 		}
 	}
+
 	.code-wrap {
 		.target {
 			padding-top: .125em;
@@ -127,6 +132,7 @@ h4 {
 	}
 
 	#col--responsive {
+		margin-top: 2rem;
 
 		.grid__row:last-of-type {
 			margin-top: 3rem;
@@ -151,12 +157,13 @@ h4 {
 .content {
     text-align: center;
     margin: 0px;
-    padding: 20px 0px;
+    padding: .65rem 0;
     border-radius: 2px;
     color: #ffffff;
     font-weight: 400;
 	font-size: .85rem;
 	background: $color--primary;
+	overflow-x: hidden;
 
 	@include media-range(sm) {
 		background: $color--green;

@@ -38,3 +38,9 @@ small, .font--small {
     font-size: 0.875rem;
 }
 
+
+
+// more specific to the demo
+strong.highlight {
+    color: $color--primary;
+}

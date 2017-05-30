@@ -3766,6 +3766,10 @@ small, .font--small {
   font-size: 0.875rem;
 }
 
+strong.highlight {
+  color: #fd3b3b;
+}
+
 .hero {
   height: 100vh;
   max-height: 100vh;
@@ -3838,6 +3842,7 @@ small, .font--small {
   color: #606069;
   font-family: 'Merriweather', serif;
   font-size: 1.125rem;
+  font-family: "Consolas", monospace;
 }
 .hero-content .hero__actions {
   margin-top: 2rem;
@@ -3974,12 +3979,22 @@ h4 .code--inline {
     flex-grow: 1;
   }
 }
+#columns .btn-wrap .btn--add span,
+#columns .btn-wrap .btn--remove span {
+  color: #fd3b3b;
+  font-weight: 900;
+  font-size: 1.125em;
+  margin-right: .25em;
+}
 #columns .code-wrap .target {
   padding-top: .125em;
   display: block;
 }
 #columns .code-wrap .target div {
   line-height: 1.85em;
+}
+#columns #col--responsive {
+  margin-top: 2rem;
 }
 #columns #col--responsive .grid__row:last-of-type {
   margin-top: 3rem;
@@ -3996,12 +4011,13 @@ h4 .code--inline {
 .content {
   text-align: center;
   margin: 0px;
-  padding: 20px 0px;
+  padding: .65rem 0;
   border-radius: 2px;
   color: #ffffff;
   font-weight: 400;
   font-size: .85rem;
   background: #fd3b3b;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 48rem) {
   .content {
