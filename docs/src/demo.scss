@@ -91,6 +91,7 @@ h4 {
 			border: 1px solid $color--smoke-1;
 			padding: .5em 1em;
 			margin-right: -1px;
+			color: inherit; // set bc safari changes color on :active & :hover
 			transition: border-color .2s ease-out;
 
 			&:hover,

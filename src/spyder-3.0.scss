@@ -42,29 +42,18 @@
 
 @include media-range(sm) {
 
- 	.grid__row {
-		-webkit-flex-flow: column wrap;
-		flex-flow: column wrap;
-
-		// iOS debugging trial code 
-		// ************************
-
-		-webkit-box-direction: normal; 
-        -webkit-box-orient: vertical; 
-
-        // ************************
-        // iOS debugging trial code 
-
-
-		.col--sm {
-			@include flex-column;
-			max-width: 100%;
-			flex-basis: 100%;
-		}
-		.grid__col:not(:first-of-type),
-		.col--sm:not(:first-of-type) {
-			margin-top: $grid-spacing--vert-1;
-		}
+	.grid__col {
+		max-width: 100%;
+		flex-basis: 100%;
+	}
+	.col--sm {
+		@include flex-column;
+		max-width: 100%;
+		flex-basis: 100%;
+	}
+	.grid__col:not(:first-of-type),
+	.col--sm:not(:first-of-type) {
+		margin-top: $grid-spacing--vert-1;
 	}
  	.hidden--sm {
 		display: none;

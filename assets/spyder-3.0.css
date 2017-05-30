@@ -61,11 +61,12 @@
 }
 
 @media screen and (max-width: 48rem) {
-  .grid__row {
-    -webkit-flex-flow: column wrap;
-    flex-flow: column wrap;
+  .grid__col {
+    max-width: 100%;
+    flex-basis: 100%;
   }
-  .grid__row .col--sm {
+
+  .col--sm {
     display: block;
     padding: 0 0.5rem;
     position: relative;
@@ -77,14 +78,15 @@
   }
 }
 @media screen and (max-width: 48rem) and (min-width: 68.8125rem) {
-  .grid__row .col--sm {
+  .col--sm {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }
 }
+
 @media screen and (max-width: 48rem) {
-  .grid__row .grid__col:not(:first-of-type),
-  .grid__row .col--sm:not(:first-of-type) {
+  .grid__col:not(:first-of-type),
+  .col--sm:not(:first-of-type) {
     margin-top: 1rem;
   }
 

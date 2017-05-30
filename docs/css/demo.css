@@ -2796,11 +2796,12 @@ Copyright (c) 2014 Daniel Eden
 }
 
 @media screen and (max-width: 48rem) {
-  .grid__row {
-    -webkit-flex-flow: column wrap;
-    flex-flow: column wrap;
+  .grid__col {
+    max-width: 100%;
+    flex-basis: 100%;
   }
-  .grid__row .col--sm {
+
+  .col--sm {
     display: block;
     padding: 0 0.5rem;
     position: relative;
@@ -2812,14 +2813,15 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 @media screen and (max-width: 48rem) and (min-width: 68.8125rem) {
-  .grid__row .col--sm {
+  .col--sm {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }
 }
+
 @media screen and (max-width: 48rem) {
-  .grid__row .grid__col:not(:first-of-type),
-  .grid__row .col--sm:not(:first-of-type) {
+  .grid__col:not(:first-of-type),
+  .col--sm:not(:first-of-type) {
     margin-top: 1rem;
   }
 
@@ -3965,6 +3967,7 @@ h4 .code--inline {
   border: 1px solid #c0c0c9;
   padding: .5em 1em;
   margin-right: -1px;
+  color: inherit;
   transition: border-color .2s ease-out;
 }
 #columns .btn-wrap .btn:hover, #columns .btn-wrap .btn:active {
