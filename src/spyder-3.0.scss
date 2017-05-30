@@ -35,18 +35,26 @@
 		margin-bottom: 0;
 	}
 }
-
-// ??? MAKE THIS IN EACH MEDIA-RANGE INSTEAD ??? 
-
 .grid__col {
 	@include flex-column;
 }
+
 
 @include media-range(sm) {
 
  	.grid__row {
 		-webkit-flex-flow: column wrap;
 		flex-flow: column wrap;
+
+		// iOS debugging trial code 
+		// ************************
+
+		-webkit-box-direction: normal; 
+        -webkit-box-orient: vertical; 
+
+        // ************************
+        // iOS debugging trial code 
+
 
 		.col--sm {
 			@include flex-column;

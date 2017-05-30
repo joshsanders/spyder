@@ -16,10 +16,3 @@ $media-break--lg-min: 68.8125rem;	//1101px @ base-16
 $media-range--sm: "screen and (max-width: #{$media-break--sm-max})"; /* 768px @ base-16 */
 $media-range--md: "screen and (min-width: #{$media-break--md-min}) and (max-width: #{$media-break--md-max})";
 $media-range--lg: "screen and (min-width: #{$media-break--lg-min})";
-
-// :root {
-//   --gutter: .75rem;
-//   --gutter-compensation: calc(var(--gutter) * -1);
-// }
-
-
