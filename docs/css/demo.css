@@ -3970,11 +3970,11 @@ h4 .code--inline {
   color: inherit;
   transition: border-color .2s ease-out;
 }
-#columns .btn-wrap .btn:hover, #columns .btn-wrap .btn:active {
+#columns .btn-wrap .btn:hover, #columns .btn-wrap .btn:active, #columns .btn-wrap .btn:focus {
   border-color: #7e7e91;
   z-index: 10;
 }
-#columns .btn-wrap .btn:active {
+#columns .btn-wrap .btn:active, #columns .btn-wrap .btn:focus {
   box-shadow: inset 0 0 10px rgba(165, 165, 177, 0.64);
 }
 @media screen and (max-width: 48rem) {
