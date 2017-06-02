@@ -41,6 +41,11 @@
     margin-left: -0.75rem;
   }
 }
+@media screen and (min-width: 68.8125rem) {
+  .grid__row {
+    margin-bottom: 1.25rem;
+  }
+}
 .grid__row .grid__row {
   margin-bottom: 0;
 }

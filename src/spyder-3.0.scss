@@ -19,7 +19,7 @@
 	padding-right: $grid-gutter;
 
 	@include media-range(lg) {
-		width: $grid-width - 2%;
+		width: $grid-width - 2%; // slightly increases margins of grid at larger sizes to allow more spacing
 		padding-right: $grid-gutter + .25rem;
 		padding-left: $grid-gutter + .25rem;
 	}
@@ -30,6 +30,10 @@
 	margin-bottom: $grid-spacing--vert-1;
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
+
+	@include media-range(lg) {
+		margin-bottom: $grid-spacing--vert-1 + .25rem;
+	}
 
 	.grid__row {
 		margin-bottom: 0;
