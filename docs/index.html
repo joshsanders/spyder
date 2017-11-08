@@ -177,9 +177,18 @@
 						<div class="sm-col md-col--6_8 lg-col--6_12">
 							<h4><strong>Responsive Columns</strong> <code class="code--inline">.[x]-col--[y_z]</code></h4>
 
-							<p>Responsive Columns are the more powerful column variation and have a slightly more advanced syntax.</p>
+							<p>Responsive Columns are the more powerful column variation and have a slightly different syntax.</p>
 
-							<p>The power of Responsive Columns stems from the implementation of Media Ranges. </p>
+							<p>The power of Responsive Columns comes from Grid Ranges(breakpoints), which are built using REMs(base = 16px) instead of pixels. This allows for a truly responsive grid system that can adapt to any device, layout, or individual settings(zoom). Each grid range allows up to a certain amount of columns:
+								<ul>
+									<li><strong>grid(sm)</strong> [0 &lt; 48rem, 768px] = full-width columns</li>
+									<li><strong>grid(md)</strong> [48.0625rem+, 769px+] = 8 columns</li>
+									<li><strong>grid(lg)</strong> [68.8125rem+, 1101+] = 12 columns</li>
+								</ul>
+							</p>
+							<p class="callout"><strong class="highlight">NOTE: </strong>Columns will wrap to the next line if the sum of the columns in a row exceed that grid range's max column count.</p>
+							
+							<p>Resize your browser window (if on desktop) to see the different grid ranges take effect below. If you're on a tablet or mobile device, you'll automatically see the corresponding grid range to your device's size.</p>
 						</div>
 					</div>
 
