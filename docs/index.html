@@ -29,7 +29,7 @@
 				</h2>
 				<h4 class="hero__descrip">A customizable, fluid CSS grid system for creating responsive layouts</h4>
 				
-				<div class="hero__actions">
+				<!-- <div class="hero__actions">
 					<div class="btn-wrap">
 						<a class="github-button btn-override" href="https://github.com/joshsanders/spyder" data-icon="octicon-star" data-size="large" aria-label="Star joshsanders/spyder on GitHub">Star</a>
 					</div>
@@ -39,35 +39,29 @@
 					<div class="btn-wrap">
 						<a class="github-button" href="https://github.com/joshsanders/spyder" data-icon="octicon-cloud-download" data-size="large" aria-label="Download Spyder">Download</a>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</header>
 
 		<section id="structure">
 			<div class="grid">
 				<div class="grid__row">
-					<div class="col--sm col--md-6_8 col--lg-6_12">
+					<div class="sm-col md-col--6_8 md--offset-1 lg-col--6_12 lg-offset--3_12">
 						<h3 class="section-title">Simple Structure</h3>
-						<p>Implementing the grid is very straightforward and requires just three layers.</p>
+						<p>Implementing the grid is very straightforward and requires just three components.</p>
 
 						<p><strong> 1)</strong> <code class="code--inline">.grid</code> &ndash; Serves as the parent container for the entire grid.</p>
 
 						<p><strong> 2)</strong> <code class="code--inline">.grid__row</code> &ndash; Helps set the vertical rhythym of layouts. This layer should <strong>always</strong> be placed within the <code class="code--inline">.grid</code> element.</p>
 
-						<p><strong> 3)</strong> <code class="code--inline">.grid__col</code> or <code class="code--inline">.col--[x]-[y_z]</code> &ndash; Use columns to build and control the horizontal flow of layouts. Columns should <strong>always</strong> be placed within the <code class="code--inline">.grid__row</code> element.</p>
+						<p><strong> 3)</strong> <code class="code--inline">.grid__col</code> &ndash; Use columns to build and control the horizontal flow of layouts. Columns should <strong>always</strong> be placed within the <code class="code--inline">.grid__row</code> element, and all of the content you wish to align to the grid should be placed within columns.</p>
 
-						<p><strong class="highlight">NOTE:</strong> There are two syntax variations for columns&mdash;both explained in the 'Columns &amp; Syntax' section below.</p>
-
-						<!-- <p>The first layer is the <code class="code--inline">.grid</code> element, which serves as the parent container for the entire grid.</p>
-
-						<p>The next layer is the <code class="code--inline">.grid__row</code> element, which helps set the vertical rhythym of layouts. This layer should <strong>always</strong> be placed within the <code class="code--inline">.grid</code> element.</p>
-
-						<p>The last layer of the grid is the columns layer. Columns makes up the heart of the grid, and are the containers in which you will place any content that you want aligned to the grid.</p> -->
+						<p class="callout"><strong class="highlight">NOTE:</strong> There is an advanced syntax for columns, further explained in the <a href="#columns">Columns &amp; Syntax</a> section below.</p>
 					</div>
 				</div> <!-- /grid__row -->
 
 				<div class="grid__row">
-					<div class="col--sm col--md-full col--lg-full">
+					<div class="sm-col md-col--full lg-col--full">
 						<div class="code-wrap code-wrap--html">
 							<code>
 								&lt;div class="grid"&gt;<br>
@@ -79,8 +73,6 @@
 								&lt;/div&gt;
 							</code>
 						</div>
-
-						<!-- <p class="callout callout--info">NOTE: Spyder utilizes the BEM naming convention to help keep the relationships between elements understandable at a glance.</p> -->
 					</div>
 				</div> <!-- /grid__row -->
 
@@ -90,25 +82,25 @@
 		<section id="fluid">
 			<div class="grid">
 				<div class="grid__row">
-					<div class="col--sm col--md-6_8 col--lg-6_12">
+					<div class="sm-col md-col--6_8 lg-col--6_12">
 						<h3 class="section-title">Fluid</h3>
-						<p>Spyder uses percent based widths, which allow for fluid resizing of columns and rows.</p>
+						<p>Spyder is built using flexbox and percentage widths. This allows for fluid resizing and responsiveness of the grid and columns.</p>
 					</div>
 				</div> <!-- /grid__row -->
 
 				<div class="grid__row">
-					<div class="col--sm col--md-full col--lg-full">
+					<div class="sm-col md-col--full lg-col--full">
 						<div class="code-wrap code-wrap--css">
 							<code>
-								.col--sm { <br>
+								.sm-col { <br>
 									<span class="indent"></span>max-width: 100%;<br>
 									<span class="indent">flex-basis: 100%;</span><br>
 								} <br>
-								.col--md-4_8 { <br>
+								.md-col--4_8 { <br>
 									<span class="indent"></span>max-width: 50%;<br>
 									<span class="indent">flex-basis: 50%;</span><br>
 								} <br>
-								.col--lg-3_12 { <br>
+								.lg-col--3_12 { <br>
 									<span class="indent"></span>max-width: 25%;<br>
 									<span class="indent">flex-basis: 25%;</span><br>
 								}
@@ -122,12 +114,12 @@
 		<section id="columns">
 			<div class="grid">
 				<div class="grid__row">
-					<div class="col--sm col--md-6_8 col--lg-6_12">
+					<div class="sm-col md-col--6_8 lg-col--6_12">
 						<h3 class="section-title">Columns &amp; Syntax</h3>
-						<p>As mentioned above, there are two(2) different variations of columns, each with their own syntax:
+						<p>As mentioned above, there are two different implementations of columns, each with their own syntax:
 							<ul>
-								<li><span class="rotate-90">&not;</span> Auto Columns</li>
-								<li><span class="rotate-90">&not;</span> Responsive Columns</li>
+								<li><strong>1)</strong> Auto Columns</li>
+								<li><strong>2)</strong> Responsive Columns</li>
 							</ul>
 						</p>
 					</div>
@@ -135,27 +127,15 @@
 
 				<article id="col--auto">
 					<div class="grid__row">
-						<div class="col--sm col--md-6_8 col--lg-6_12">
+						<div class="sm-col md-col--6_8 lg-col--6_12">
+							
 							<h4><strong>Auto Columns</strong> <code class="code--inline">.grid__col</code></h4>
 
-							<p>Auto Columns are the most basic form of columns, with their syntax following the BEM naming pattern that Spyder uses by default.</p>
+							<p>Auto Columns are the most basic form of columns, with their syntax following the BEM namespacing that Spyder uses by default.</p>
 
-							<p><strong class="highlight">NOTE:</strong> Auto Columns are fluid in width, but the only responsive behavior they exhibit is the ability to morph into vertically stacked, full-width columns at small device sizes. Because of this, it's recommended to use Auto Columns sparingly and/or for very basic layouts.</p>
+							<p class="callout"><strong class="highlight">NOTE:</strong> Auto Columns are fluid in width, but the only responsive behavior they exhibit is the ability to morph into vertically stacked, full-width columns at small device sizes. Because of this, it's recommended to use Auto Columns sparingly and/or for very basic layouts.</p>
 
 							<p>You can explore the behavior of Auto Columns by adding/removing columns below.</p>
-						</div>
-					</div>
-
-					<div class="grid__row js-varyColumns--row">
-						<div class="grid__col">
-							<div class="content">
-								<span>.grid__col</span>
-							</div>
-						</div>
-						<div class="grid__col">
-							<div class="content">
-								<span>.grid__col</span>
-							</div>
 						</div>
 					</div>
 
@@ -163,9 +143,22 @@
 						<button class="btn btn--add js-btn--addCol"><span>+</span> Column</button>
 						<button class="btn btn--remove js-btn--removeCol"><span>&ndash;</span> Column</button>
 					</div>
+
+					<div class="grid__row vary-columns js-varyColumns--row">
+						<div class="grid__col">
+							<div class="content">
+								<span>.grid__col</span>
+							</div>
+						</div>
+						<div class="grid__col">
+							<div class="content">
+								<span>.grid__col</span>
+							</div>
+						</div>
+					</div>
 					
 					<div class="grid__row">
-						<div class="col--sm col--md-full col--lg-full">
+						<div class="sm-col md-col--full lg-col--full">
 							<div class="code-wrap code-wrap--html">
 								<code class="js-varyColumns--code">
 									&lt;div class="grid__row"&gt;<br>
@@ -181,293 +174,293 @@
 
 				<article id="col--responsive">
 					<div class="grid__row">
-						<div class="col--sm col--md-6_8 col--lg-6_12">
-							<h4><strong>Responsive Columns</strong> <code class="code--inline">.col--[x]-[y_z]</code></h4>
+						<div class="sm-col md-col--6_8 lg-col--6_12">
+							<h4><strong>Responsive Columns</strong> <code class="code--inline">.[x]-col--[y_z]</code></h4>
 
-							<p>Responsive Columns are the more powerful column variation and have a slightly more advanced syntax that deviates from the default BEM naming convention.</p>
+							<p>Responsive Columns are the more powerful column variation and have a slightly more advanced syntax.</p>
 
 							<p>The power of Responsive Columns stems from the implementation of Media Ranges. </p>
 						</div>
 					</div>
 
 					<div class="grid__row">
-						<div class="col--sm col--md-1_8 col--lg-1_12">
+						<div class="sm-col md-col--1_8 lg-col--1_12">
 							<div class="content">
-								<span class="hidden--md hidden--lg">.col--sm</span>
-								<span class="hidden--sm hidden--lg">.col--md-1_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+								<span class="md-is-hidden lg-is-hidden">.sm-col</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col--1_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--1_12</span>
 							</div>
 						</div>
-						<div class=" col--sm col--md-1_8 col--lg-1_12">
+						<div class="sm-col md-col--1_8 lg-col--1_12">
 							<div class="content">
-								<span class="hidden--md hidden--lg">.col--sm</span>
-								<span class="hidden--sm hidden--lg">.col--md-1_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+								<span class="md-is-hidden lg-is-hidden">.sm-col</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col--1_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--1_12</span>
 							</div>
 						</div>
-						<div class="col--sm col--md-1_8 col--lg-1_12">
+						<div class="sm-col md-col--1_8 lg-col--1_12">
 							<div class="content">
-								<span class="hidden--md hidden--lg">.col--sm</span>
-								<span class="hidden--sm hidden--lg">.col--md-1_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+								<span class="md-is-hidden lg-is-hidden">.sm-col</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col--1_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--1_12</span>
 							</div>
 						</div>
-						<div class="col--sm col--md-1_8 col--lg-1_12">
+						<div class="sm-col md-col--1_8 lg-col--1_12">
 							<div class="content">
-								<span class="hidden--md hidden--lg">.col--sm</span>
-								<span class="hidden--sm hidden--lg">.col--md-1_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+								<span class="md-is-hidden lg-is-hidden">.sm-col</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col--1_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--1_12</span>
 							</div>
 						</div>
-						<div class="hidden--sm col--md-1_8 col--lg-1_12">
+						<div class="sm-is-hidden md-col--1_8 lg-col--1_12">
 							<div class="content">
-								<span class="hidden--sm hidden--lg">.md-col-1_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col-1_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--1_12</span>
 							</div>
 						</div>
-						<div class="hidden--sm col--md-1_8 col--lg-1_12">
+						<div class="sm-is-hidden md-col--1_8 lg-col--1_12">
 							<div class="content">
-								<span class="hidden--sm hidden--lg">.md-col-1_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col-1_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--1_12</span>
 							</div>
 						</div>
-						<div class="hidden--sm col--md-1_8 col--lg-1_12">
+						<div class="sm-is-hidden md-col--1_8 lg-col--1_12">
 							<div class="content">
-								<span class="hidden--sm hidden--lg">.md-col-1_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col-1_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--1_12</span>
 							</div>
 						</div>
-						<div class="hidden--sm col--md-1_8 col--lg-1_12">
+						<div class="sm-is-hidden md-col--1_8 lg-col--1_12">
 							<div class="content">
-								<span class="hidden--sm hidden--lg">.md-col-1_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col-1_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--1_12</span>
 							</div>
 						</div>
-						<div class="hidden--sm hidden--md col--lg-1_12">
+						<div class="sm-is-hidden md-is-hidden lg-col--1_12">
 							<div class="content">
-								<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--1_12</span>
 							</div>
 						</div>
-						<div class="hidden--sm hidden--md col--lg-1_12">
+						<div class="sm-is-hidden md-is-hidden lg-col--1_12">
 							<div class="content">
-								<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--1_12</span>
 							</div>
 						</div>
-						<div class="hidden--sm hidden--md col--lg-1_12">
+						<div class="sm-is-hidden md-is-hidden lg-col--1_12">
 							<div class="content">
-								<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--1_12</span>
 							</div>
 						</div>
-						<div class="hidden--sm hidden--md col--lg-1_12">
+						<div class="sm-is-hidden md-is-hidden lg-col--1_12">
 							<div class="content">
-								<span class="hidden--sm hidden--md">.col--lg-1_12</span>
-							</div>
-						</div>
-					</div> <!-- /grid__row -->
-
-					<div class="grid__row">
-						<div class="col--sm col--md-2_8 col--lg-2_12">
-							<div class="content">
-								<span class="hidden--md hidden--lg">.sm-col</span>
-								<span class="hidden--sm hidden--lg">.md-col--2_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-2_12</span>
-							</div>
-						</div>
-						<div class="hidden--sm col--md-2_8 col--lg-2_12">
-							<div class="content">
-								<span class="hidden--lg">.md-col--2_8</span>
-								<span class="hidden--md">.col--lg-2_12</span>
-							</div>
-						</div>
-						<div class="hidden--sm col--md-2_8 col--lg-2_12">
-							<div class="content">
-								<span class="hidden--lg">.md-col--2_8</span>
-								<span class="hidden--md">.col--lg-2_12</span>
-							</div>
-						</div>
-						<div class="hidden--sm col--md-2_8 col--lg-2_12">
-							<div class="content">
-								<span class="hidden--lg">.md-col--2_8</span>
-								<span class="hidden--md">.col--lg-2_12</span>
-							</div>
-						</div>
-						<div class="hidden--sm hidden--md col--lg-2_12">
-							<div class="content">
-								<span class="">.col--lg-2_12</span>
-							</div>
-						</div>
-						<div class="hidden--sm hidden--md col--lg-2_12">
-							<div class="content">
-								<span class="">.col--lg-2_12</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--1_12</span>
 							</div>
 						</div>
 					</div> <!-- /grid__row -->
 
 					<div class="grid__row">
-						<div class="col--sm col--md-4_8 col--lg-3_12">
+						<div class="sm-col md-col--2_8 lg-col--2_12">
 							<div class="content">
-								<span class="hidden--md hidden--lg">.col--sm</span>
-								<span class="hidden--sm hidden--lg">.col--md-4_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-3_12</span>
+								<span class="md-is-hidden lg-is-hidden">.sm-col</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col--2_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--2_12</span>
 							</div>
 						</div>
-						<div class="hidden--sm col--md-4_8 col--lg-3_12">
+						<div class="sm-is-hidden md-col--2_8 lg-col--2_12">
 							<div class="content">
-								<span class="hidden--lg">.col--md-4_8</span>
-								<span class="hidden--md">.col--3_12</span>
+								<span class="lg-is-hidden">.md-col--2_8</span>
+								<span class="md-is-hidden">.lg-col--2_12</span>
 							</div>
 						</div>
-						<div class="hidden--sm hidden--md col--lg-3_12">
+						<div class="sm-is-hidden md-col--2_8 lg-col--2_12">
 							<div class="content">
-								<span>.col--lg-3_12</span>
+								<span class="lg-is-hidden">.md-col--2_8</span>
+								<span class="md-is-hidden">.lg-col--2_12</span>
 							</div>
 						</div>
-						<div class="hidden--sm hidden--md col--lg-3_12">
+						<div class="sm-is-hidden md-col--2_8 lg-col--2_12">
 							<div class="content">
-								<span>.col--lg-3_12</span>
+								<span class="lg-is-hidden">.md-col--2_8</span>
+								<span class="md-is-hidden">.lg-col--2_12</span>
+							</div>
+						</div>
+						<div class="sm-is-hidden md-is-hidden lg-col--2_12">
+							<div class="content">
+								<span class="">.lg-col--2_12</span>
+							</div>
+						</div>
+						<div class="sm-is-hidden md-is-hidden lg-col--2_12">
+							<div class="content">
+								<span class="">.lg-col--2_12</span>
 							</div>
 						</div>
 					</div> <!-- /grid__row -->
 
 					<div class="grid__row">
-						<div class="col--sm col--md-full col--lg-4_12">
+						<div class="sm-col md-col--4_8 lg-col--3_12">
 							<div class="content">
-								<span class="hidden--md hidden--lg">.col--sm</span>
-								<span class="hidden--sm hidden--lg">.col--md-full</span>
-								<span class="hidden--sm hidden--md">.col--lg-4_12</span>
+								<span class="md-is-hidden lg-is-hidden">.sm-col</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col--4_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--3_12</span>
 							</div>
 						</div>
-						<div class="hidden--sm hidden--md col--lg-4_12">
-							<div class="content">.col--lg-4_12</div>
-						</div>
-						<div class="hidden--sm hidden--md col--lg-4_12">
+						<div class="sm-is-hidden md-col--4_8 lg-col--3_12">
 							<div class="content">
-								<span class="hidden--lg">.col--md-full</span>
-								<span class="hidden--md">.col--lg-4_12</span>
+								<span class="lg-is-hidden">.md-col--4_8</span>
+								<span class="md-is-hidden">.col--3_12</span>
+							</div>
+						</div>
+						<div class="sm-is-hidden md-is-hidden lg-col--3_12">
+							<div class="content">
+								<span>.lg-col--3_12</span>
+							</div>
+						</div>
+						<div class="sm-is-hidden md-is-hidden lg-col--3_12">
+							<div class="content">
+								<span>.lg-col--3_12</span>
+							</div>
+						</div>
+					</div> <!-- /grid__row -->
+
+					<div class="grid__row">
+						<div class="sm-col md-col--full lg-col--4_12">
+							<div class="content">
+								<span class="md-is-hidden lg-is-hidden">.sm-col</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col--full</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--4_12</span>
+							</div>
+						</div>
+						<div class="sm-is-hidden md-is-hidden lg-col--4_12">
+							<div class="content">.lg-col--4_12</div>
+						</div>
+						<div class="sm-is-hidden md-is-hidden lg-col--4_12">
+							<div class="content">
+								<span class="lg-is-hidden">.md-col--full</span>
+								<span class="md-is-hidden">.lg-col--4_12</span>
 							</div>
 						</div>
 					</div> <!-- /grid__row -->
 
 
-					<div class="grid__row hidden--sm hidden--md">
-						<div class="col--lg-6_12">
+					<div class="grid__row sm-is-hidden md-is-hidden">
+						<div class="lg-col--6_12">
 							<div class="content">
-								<span>.col--lg-6_12</span>
+								<span>.lg-col--6_12</span>
 							</div>
 						</div>
-						<div class="col--lg-6_12">
+						<div class="lg-col--6_12">
 							<div class="content">
-								<span>.col--lg-6_12</span>
+								<span>.lg-col--6_12</span>
 							</div>
 						</div>
 					</div> <!-- /grid__row -->
 		  
-					<div class="grid__row hidden--sm hidden--md">
-						<div class="col--lg-full">
+					<div class="grid__row sm-is-hidden md-is-hidden">
+						<div class="lg-col--full">
 							<div class="content">
-								<span>.col--lg-full</span>
+								<span>.lg-col--full</span>
 							</div>
 						</div>
 					</div> <!-- /grid__row -->
 
 					<div class="grid__row">
-						<div class="col--sm col--md-1_8 col--lg-1_12">
+						<div class="sm-col md-col--1_8 lg-col--1_12">
 							<div class="content">
-								<span class="hidden--md hidden--lg">.col--sm</span>
-								<span class="hidden--sm hidden--lg">.col--md-1_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-1_12</span>
+								<span class="md-is-hidden lg-is-hidden">.sm-col</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col--1_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--1_12</span>
 							</div>
 						</div>
-						<div class="hidden--sm col--md-7_8 col--lg-11_12">
+						<div class="sm-is-hidden md-col--7_8 lg-col--11_12">
 							<div class="content">
-								<span class="hidden--sm hidden--lg">.col--md-7_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-11_12</span>
-							</div>
-						</div>
-					</div> <!-- /grid__row -->
-
-					<div class="grid__row hidden--sm">
-						<div class="col--md-2_8 col--lg-2_12">
-							<div class="content">
-								<span class="hidden--sm hidden--lg">.col--md-2_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-2_12</span>
-							</div>
-						</div>
-						<div class="col--md-6_8 col--lg-10_12">
-							<div class="content">
-								<span class="hidden--sm hidden--lg">.col--md-6_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-10_12</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col--7_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--11_12</span>
 							</div>
 						</div>
 					</div> <!-- /grid__row -->
 
-					<div class="grid__row hidden--sm">
-						<div class="col--md-3_8 col--lg-3_12">
+					<div class="grid__row sm-is-hidden">
+						<div class="md-col--2_8 lg-col--2_12">
 							<div class="content">
-								<span class="hidden--sm hidden--lg">.col--md-3_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-3_12</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col--2_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--2_12</span>
 							</div>
 						</div>
-						<div class="col--md-5_8 col--lg-9_12">
+						<div class="md-col--6_8 lg-col--10_12">
 							<div class="content">
-								<span class="hidden--sm hidden--lg">.col--md-5_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-9_12</span>
-							</div>
-						</div>
-					</div> <!-- /grid__row -->
-
-					<div class="grid__row hidden--sm">
-						<div class="col--md-4_8 col--lg-4_12">
-							<div class="content">
-								<span class="hidden--sm hidden--lg">.col--md-4_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-4_12</span>
-							</div>
-						</div>
-						<div class="col--md-4_8 col--lg-8_12">
-							<div class="content">
-								<span class="hidden--sm hidden--lg">.col--md-4_8</span>
-								<span class="hidden--sm hidden--md">.col--lg-8_12</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col--6_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--10_12</span>
 							</div>
 						</div>
 					</div> <!-- /grid__row -->
 
-					<div class="grid__row hidden--sm hidden--md">
-						<div class="col--lg-5_12">
+					<div class="grid__row sm-is-hidden">
+						<div class="md-col--3_8 lg-col--3_12">
 							<div class="content">
-								<span>.col--lg-5_12</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col--3_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--3_12</span>
 							</div>
 						</div>
-						<div class="col--lg-7_12">
+						<div class="md-col--5_8 lg-col--9_12">
 							<div class="content">
-								<span>.col--lg-7_12</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col--5_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--9_12</span>
 							</div>
 						</div>
 					</div> <!-- /grid__row -->
 
-					<div class="grid__row hidden--sm hidden--md">
-						<div class="col--lg-6_12">
+					<div class="grid__row sm-is-hidden">
+						<div class="md-col--4_8 lg-col--4_12">
 							<div class="content">
-								<span>.col--lg-6_12</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col--4_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--4_12</span>
 							</div>
 						</div>
-						<div class="col--lg-6_12">
+						<div class="md-col--4_8 lg-col--8_12">
 							<div class="content">
-								<span>.col--lg-6_12</span>
+								<span class="sm-is-hidden lg-is-hidden">.md-col--4_8</span>
+								<span class="sm-is-hidden md-is-hidden">.lg-col--8_12</span>
+							</div>
+						</div>
+					</div> <!-- /grid__row -->
+
+					<div class="grid__row sm-is-hidden md-is-hidden">
+						<div class="lg-col--5_12">
+							<div class="content">
+								<span>.lg-col--5_12</span>
+							</div>
+						</div>
+						<div class="lg-col--7_12">
+							<div class="content">
+								<span>.lg-col--7_12</span>
+							</div>
+						</div>
+					</div> <!-- /grid__row -->
+
+					<div class="grid__row sm-is-hidden md-is-hidden">
+						<div class="lg-col--6_12">
+							<div class="content">
+								<span>.lg-col--6_12</span>
+							</div>
+						</div>
+						<div class="lg-col--6_12">
+							<div class="content">
+								<span>.lg-col--6_12</span>
 							</div>
 						</div>
 					</div> <!-- /grid__row -->
 
 
 					<div class="grid__row">
-						<div class="col--sm col--md-full col--lg-full">
+						<div class="sm-col md-col--full lg-col--full">
 							<div class="code-wrap code-wrap--html">
 								<code>
 									&lt;div class="grid__row"&gt;<br>
-										<span class="indent"></span>&lt;div class="col--lg-3_12 col--md-2_8 col--sm"&gt;<br>
-											<span class="indent--2x"></span><em>...Column 1</em><br>
+										<span class="indent"></span>&lt;div class="lg-col--3_12 md-col--2_8 sm-col"&gt;<br>
+											<span class="indent--2x"></span><em>...column 1 content</em><br>
 										<span class="indent"></span>&lt;/div&gt;<br>
-										<span class="indent"></span>&lt;div class="col--lg-3_12 col--md-2_8 col--sm"&gt;<br>
-											<span class="indent--2x"></span><em>...Column 2</em><br>
+										<span class="indent"></span>&lt;div class="lg-col--3_12 md-col--2_8 sm-col"&gt;<br>
+											<span class="indent--2x"></span><em>...column 2 content</em><br>
 										<span class="indent"></span>&lt;/div&gt;<br>
 									&lt;/div&gt; <br>
 								</code>
@@ -483,10 +476,12 @@
 		<!-- OFFSETS -->
 		<!-- ================= -->
 
-		<section id="offets">
+		<!-- need to build these out in order to start using this in production -->
+
+		<section id="offsets">
 			<div class="grid">
 				<div class="grid__row">
-					<div class="col--sm col--md-6_8 col--lg-6_12">
+					<div class="sm-col md-col--6_8 lg-col--6_12">
 						<h3 class="section-title">Offsetting Columns</h3>
 						<p>Coming soon...</p>
 					</div>
@@ -501,7 +496,7 @@
 		<section id="nesting">
 			<div class="grid">
 				<div class="grid__row">
-					<div class="col--sm col--md-6_8 col--lg-6_12">
+					<div class="sm-col md-col--6_8 lg-col--6_12">
 						<h3 class="section-title">Nested Grids</h3>
 						<p>Coming soon...</p>
 					</div>
@@ -516,7 +511,7 @@
 		<section id="alignment">
 			<div class="grid">
 				<div class="grid__row">
-					<div class="col--sm col--md-6_8 col--lg-6_12">
+					<div class="sm-col md-col--6_8 lg-col--6_12">
 						<h3 class="section-title">Alignment Overrides</h3>
 						<p>Coming soon...</p>
 					</div>
@@ -524,14 +519,14 @@
 			</div>	<!-- /grid -->
 		</section>
 
-		<!-- ================= -->
-		<!-- REORDERING -->
-		<!-- ================= -->
+		<!-- ==================== -->
+		<!-- REORDERING/REVERSING -->
+		<!-- ==================== -->
 
 		<section id="reordering">
 			<div class="grid">
 				<div class="grid__row">
-					<div class="col--sm col--md-6_8 col--lg-6_12">
+					<div class="sm-col md-col--6_8 lg-col--6_12">
 						<h3 class="section-title">Column Ordering</h3>
 						<p>Coming soon...</p>
 					</div>
@@ -546,7 +541,7 @@
 		<section id="reversing">
 			<div class="grid">
 				<div class="grid__row">
-					<div class="col--sm col--md-6_8 col--lg-6_12">
+					<div class="sm-col md-col--6_8 lg-col--6_12">
 						<h3 class="section-title">Reversing</h3>
 						<p>Coming soon...</p>
 					</div>
@@ -557,7 +552,7 @@
 		
 
 
-		<script async defer src="https://buttons.github.io/buttons.js"></script>
+		<!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
 		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="js/script.min.js"></script>
 	</body>

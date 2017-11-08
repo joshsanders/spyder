@@ -1,0 +1,64 @@
+/*------------------------------------*\
+  #COMPONENTS/COLUMNS/MD
+\*------------------------------------*/
+
+// !! DEPENDENCIES
+// ------------------------
+// - config/_variables.scss
+// - config/_mixins.scss
+
+
+@include grid(md) {
+
+	.md-col--1_8 {
+		@include flex-column;
+		max-width: 12.5%;
+		flex-basis: 12.5%;
+	}
+
+	.md-col--2_8 {
+		@include flex-column;
+		max-width: 25%;
+		flex-basis: 25%;
+	}
+
+	.md-col--3_8 {
+		@include flex-column;
+		max-width: 37.5%;
+		flex-basis: 37.5%;
+	}
+
+	.md-col--4_8 {
+		@include flex-column;
+		max-width: 50%;
+		flex-basis: 50%;
+	}
+
+	.md-col--5_8 {
+		@include flex-column;
+		max-width: 62.5%;
+		flex-basis: 62.5%;
+	}
+
+	.md-col--6_8 {
+		@include flex-column;
+		max-width: 75%;
+		flex-basis: 75%;
+	}
+
+	.md-col--7_8 {  
+		@include flex-column;
+		max-width: 87.5%;
+		flex-basis: 87.5%;
+	}
+
+	.md-col--full {
+		@include flex-column;
+		max-width: 100%;
+		flex-basis: 100%;
+	}
+
+	.md-is-hidden {
+		display: none;
+	}
+}

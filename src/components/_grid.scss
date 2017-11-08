@@ -1,0 +1,47 @@
+/*------------------------------------*\
+  #COMPONENTS/GRID
+\*------------------------------------*/
+
+// !! DEPENDENCIES
+// ------------------------
+// - config/_variables.scss
+// - config/_mixins.scss
+
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.grid {
+	width: $grid-width;
+	max-width: $grid-max-width;
+	margin: 0px auto;
+	position: relative;
+	padding-right: $grid-gutter;
+	padding-left: $grid-gutter;
+
+	// slightly increases margins of grid at larger sizes to allow more spacing
+	@include grid(lg) {
+		width: calc( #{$grid-width} - 1rem );
+	}
+}
+
+.grid__row { 
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	@include gutter-compensation;
+	@include flex-container;
+}
+
+
+// experimental
+.grid__row--vert { 
+	-webkit-flex-flow: column wrap;
+	flex-flow: column wrap;
+	@include gutter-compensation;
+	@include flex-container;
+}

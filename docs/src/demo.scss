@@ -41,6 +41,14 @@ body {
 	background: #eeeeee;
 }
 
+.grid__row {
+	margin-bottom: 1rem;
+
+	// background: #f0f0f9; /*paint gutters*/
+	// padding-top: 1rem;
+	// padding-bottom: 1rem;
+}
+
 .section-title {
     font-weight: 900;
     font-family: 'titillium web', sans-serif;
@@ -54,35 +62,46 @@ body {
 }
 
 .callout {
-	border: 1px solid;
-	border-left: 4px solid;
-	border-color: $color--steel-1;
-	color: $color--steel-1;
-	padding: .5rem;
-	margin: 1.3rem 0;
+	font-size: 0.875rem;
+	background: rgba(253, 59, 59, 0.08);
+    padding: 1rem;
+    border: 1px solid #fd3b3b;
 	@include border-radius(2px);
-}
 
-li {
-	.rotate-90 {
-		transform: translate(0%, 20%) scale(1, -1);
-		display: inline-block;
-		margin-right: .25em;
+	a {
+		color: $color--primary;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }
+
+// li {
+
+// 	.rotate-90 {
+// 		transform: translate(0%, 20%) scale(1, -1);
+// 		display: inline-block;
+// 		margin-right: .25em;
+// 	}
+// }
+
 h4 {
+
 	.code--inline {
 		margin-left: .25em;
 	}
 }
+
 #columns {
+
 	.btn-wrap {
 		-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	    justify-content: center;
-		margin: 2.5rem;
+		margin: 2rem;
 
-	    @include media-range(sm) {
+	    @include grid(sm) {
 			-webkit-flex-flow: row wrap;
 			flex-flow: row wrap;
 	    }
@@ -101,12 +120,12 @@ h4 {
 				border-color: darken($color--smoke-1, 24%);
 				z-index: 10;
 			}
-			&:active,
+			// &:active,
 			&:focus {
 				box-shadow: inset 0 0 10px rgba( darken($color--smoke-1, 10%), .64);
 			}
 
-			@include media-range(sm) {
+			@include grid(sm) {
 				flex-grow: 1;
 			}
 		}
@@ -124,6 +143,7 @@ h4 {
 	}
 
 	.code-wrap {
+
 		.target {
 			padding-top: .125em;
 			display: block;
@@ -131,6 +151,13 @@ h4 {
 			div {
 				line-height: 1.85em;
 			}
+		}
+	}
+
+	#col--auto {
+
+		h4 {
+		    margin-top: 0;
 		}
 	}
 
@@ -143,20 +170,14 @@ h4 {
 	}
 }
 
-
-
-.grid {
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+.vary-columns {
+	margin-bottom: 2rem;
 }
-.grid__row {
-	// background: #f0f0f9; /*paint gutters*/
-	// padding-top: 1rem;
-	// padding-bottom: 1rem;
-}
+
 /* .grid__col {
 	transition: all .2s ease-in;
 } */
+
 .content {
     text-align: center;
     margin: 0px;
@@ -166,13 +187,12 @@ h4 {
     font-weight: 400;
 	font-size: .85rem;
 	background: $color--primary;
-	overflow-x: hidden;
 
-	@include media-range(sm) {
+	@include grid(sm) {
 		background: $color--green;
 	}
 
-	@include media-range(md) {
+	@include grid(md) {
 		background: $color--blue;
 	}
 }

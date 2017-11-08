@@ -1,31 +1,47 @@
-// mixin for using @include to control style of specific elements at diff. grid ranges
-@mixin media-range($range) {
+/*------------------------------------*\
+  #MIXINS
+\*------------------------------------*/
+
+// !! DEPENDENCIES
+// ------------------------
+// - config/_variables.scss
+
+/*
+ *  [1] mixin for to controlling spyder's grid break-points (media queries)
+ *
+ *  [2] Gutter compensation allows the .grid__row element to align properly inside its parent .grid
+ *	container, in turn allowing the .grid__row's children (columns) to align properly as well.
+ *
+ *  [3] Implementation of variables noted above in [2] to create spyder's grid-ranges
+ *
+*/
+
+
+/* [1] */
+@mixin grid($range) {
 	@if $range == sm {
-		@media screen and (max-width: $media-break--sm-max) { 
+		@media screen and (max-width: $sm--max) { 
 			@content;
 		}
 	}
 	@else if $range == md {
-		@media screen and (min-width: $media-break--md-min) and (max-width: $media-break--md-max) { 
+		@media screen and (min-width: $md--min) and (max-width: $md--max) { 
 			@content; 
 		}
 	}
 	@else if $range == lg {
-		@media screen and (min-width: $media-break--lg-min) { 
+		@media screen and (min-width: $lg--min) { 
 			@content; 
 		}
   	}
 }
 
+/* [2] */
 @mixin gutter-compensation {
-	margin-right: $grid-gutter-compensation; //fix this to remove extra var and use calc fn on $grid-gutter var
-	margin-left: $grid-gutter-compensation;
-
-	@include media-range(lg) {
-		margin-right: $grid-gutter-compensation - .25rem ;
-		margin-left: $grid-gutter-compensation - .25rem ;
-	}
+	margin-right: $grid-gutter * -1;
+	margin-left: $grid-gutter * -1;
 }
+
 @mixin flex-container {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -33,6 +49,7 @@
 	display: -ms-flexbox;
 	display: flex;
 }
+
 @mixin flex-column {
 	display: block;
 	padding: 0 $grid-gutter;
@@ -40,10 +57,5 @@
 	min-height: 1px;
 	flex-grow: 1;
 	flex-shrink: 1;
-
-	@include media-range(lg) {
-		padding-left: $grid-gutter + .25rem;
-		padding-right: $grid-gutter + .25rem;
-	}
 }
 
