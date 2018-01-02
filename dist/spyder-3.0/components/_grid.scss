@@ -1,0 +1,45 @@
+/*------------------------------------*\
+  #COMPONENTS/GRID
+\*------------------------------------*/
+
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.grid {
+	width: $grid-width;
+	max-width: $grid-max-width;
+	margin: 0px auto;
+	position: relative;
+	padding-right: $grid-gutter;
+	padding-left: $grid-gutter;
+
+	@include grid(lg) {
+		width: calc( #{$grid-width} - ( #{$grid-gutter} * 2) );
+	}
+
+}
+
+.grid__row { 
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	@include gutter-compensation;
+	@include flex-container;
+}
+
+.grid__col {
+	@include flex-column;
+}
+
+// experimental
+// .grid__row--vert { 
+// 	-webkit-flex-flow: column wrap;
+// 	flex-flow: column wrap;
+// 	@include gutter-compensation;
+// 	@include flex-container;
+// }

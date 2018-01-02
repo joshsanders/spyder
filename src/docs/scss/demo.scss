@@ -1,0 +1,295 @@
+// CONFIG
+@import "config/variables";
+@import "config/mixins";
+// @import "config/media-queries"; /* MQs go here??? */
+
+// VENDOR
+@import "vendor/animate";
+@import "../../../dist/spyder-3.0/spyder-3.0";
+
+// BASE
+@import "base/reset";
+@import "base/typography";
+// @import "base/color";
+
+// LAYOUT
+@import	"layout/hero";
+// @import "layout/grid"; /* currently linked in <head> of demo.html as external spyder-3.0.css */
+// @import "layout/header";
+// @import "layout/footer";
+
+// COMPONENTS
+@import "components/code";
+// @import "components/buttons";
+// @import "components/navigation";
+// @import "components/inputs";
+
+// PAGES ??  or STATE ??
+// @import "pages/...";
+
+// UTILITIES
+// @import "utilities/margins";
+
+// JS HOOKS
+// @import "js-hooks/...";
+
+
+
+
+body {
+	background: $color--smoke-2;
+}
+
+// more specific to the demo
+strong.highlight {
+    color: $color--primary;
+}
+
+.grid__row {
+	margin-bottom: 1rem;
+	// background: #f0f0f9; /*paint gutters*/
+	// padding-top: 1rem;
+	// padding-bottom: 1rem;
+
+	.grid__row {
+		margin-top: 1rem;
+		margin-bottom: 0;
+	}
+}
+
+.grid__col:not(:first-of-type) {
+
+	@include grid(sm) {
+		margin-top: 1rem;
+	}
+}
+
+.section-title {
+    font-weight: 900;
+    font-family: 'titillium web', sans-serif;
+
+	// .meta-title {
+	//     font-size: 50%;
+	//     text-transform: lowercase;
+	//     letter-spacing: .05em;
+	//     color: $color--smoke-1;
+	// }
+}
+
+.callout {
+	font-size: 0.875rem;
+	background: rgba(253, 59, 59, 0.08);
+    padding: 1rem;
+    border: 1px solid #fd3b3b;
+	border-radius: 2px;
+
+	a {
+		color: $color--primary;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+// li {
+
+// 	.rotate-90 {
+// 		transform: translate(0%, 20%) scale(1, -1);
+// 		display: inline-block;
+// 		margin-right: .25em;
+// 	}
+// }
+
+h4 {
+
+	.code--inline {
+		margin-left: .25em;
+		vertical-align: middle;
+	}
+}
+
+#columns {
+
+	.btn-wrap {
+		-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	    justify-content: center;
+		margin: 2rem;
+
+	    @include grid(sm) {
+			-webkit-flex-flow: row wrap;
+			flex-flow: row wrap;
+	    }
+
+		.btn {
+			border: 1px solid $color--smoke-1;
+			padding: .5em 1em;
+			margin-right: -1px;
+			color: inherit; // set bc safari changes color on :active & :hover
+			transition: border-color .2s ease-out;
+			border-radius: 0px;
+
+			&:hover,
+			&:active,
+			&:focus {
+				// background: lighten($color--smoke-1, 10%);
+				border-color: darken($color--smoke-1, 24%);
+				z-index: 10;
+			}
+			// &:active,
+			&:focus {
+				box-shadow: inset 0 0 10px rgba( darken($color--smoke-1, 10%), .64);
+			}
+
+			@include grid(sm) {
+				flex-grow: 1;
+			}
+
+		}
+
+		.btn--add span,
+		.btn--remove span {
+			color: $color--primary;
+		    font-weight: 900;
+		    font-size: 1.125em;
+		    margin-right: .25em;
+		}
+		.btn--remove {
+
+		}
+	}
+
+	.code-wrap {
+
+		.target {
+			padding-top: .125em;
+			display: block;
+
+			div {
+				line-height: 1.85em;
+			}
+		}
+	}
+
+	#col--auto {
+
+		h4 {
+		    margin-top: 0;
+		}
+	}
+
+	#col--responsive {
+		margin-top: 2rem;
+
+		// .grid__row:last-of-type {
+		// 	margin-top: 3rem;
+		// }	
+	}
+}
+
+.vary-columns {
+	margin-bottom: 2rem;
+}
+
+/* .grid__col {
+	transition: all .2s ease-in;
+} */
+
+.content {
+    text-align: center;
+    margin: 0px;
+    padding: .65rem 0;
+    border-radius: 2px;
+    color: #ffffff;
+    font-weight: 400;
+	font-size: .85rem;
+	background: $color--primary;
+
+	@include grid(sm) {
+		background: $color--green;
+	}
+
+	@include grid(md) {
+		background: $color--blue;
+	}
+}
+
+.content.nested {
+    text-align: center;
+    margin: 0px;
+    padding: .65rem 0;
+    border-radius: 2px;
+    color: #ffffff;
+    font-weight: 400;
+	font-size: .85rem;
+	background: darken($color--primary, 30%);
+
+	@include grid(sm) {
+		background: darken($color--green, 30%);
+	}
+
+	@include grid(md) {
+		background: darken($color--blue, 30%);
+	}
+}
+
+.table--defs {
+	width: 100%;
+
+	tbody {
+		background: $color--smoke-2;
+	}
+
+	tr {
+		@include flex-container;
+    	flex-direction: row;
+	}
+
+	th {
+		display: block;
+		position: relative;
+		flex-grow: 1;
+		flex-shrink: 0;
+
+		border-bottom: 2px solid $color--char-2;
+		text-align: left;
+		padding-bottom: .5rem;
+		font-size: .75rem;
+		text-transform: uppercase;
+		font-weight: 600;
+		letter-spacing: .02em;
+	}
+
+	td { 
+		border: 2px solid $color--smoke-2;
+		padding: .5rem 0;
+
+		display: block;
+		position: relative;
+		flex-grow: 1;
+		flex-shrink: 0;
+	}
+
+	.table__key {
+		font-weight: 700;
+	}
+
+	.table__th--key,
+	.table__th--value,
+	.table__key,
+	.table__value {
+		flex-basis: 30%;
+	}
+
+	.table__th--description ,
+	.table__description {
+		flex-basis: 40%;
+	}
+
+}
+
+
+
+
+

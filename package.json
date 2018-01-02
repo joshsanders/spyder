@@ -1,0 +1,33 @@
+{
+  "name": "spyder",
+  "version": "1.0.0",
+  "description": "A typographic-scale based CSS grid system built with Flexbox",
+  "main": "./docs/index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshsanders/spyder.git"
+  },
+  "author": "Josh Sanders",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshsanders/spyder/issues"
+  },
+  "homepage": "https://github.com/joshsanders/spyder#readme"
+}
