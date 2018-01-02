@@ -752,10 +752,20 @@
 							<div class="code-wrap code-wrap--html">
 								<code>
 									&lt;div class="grid__row"&gt;<br>
-										<span class="indent">&lt;div class="grid__col md:col--3 lg:col--4"&gt;<br>
+										<span class="indent">&lt;div class="grid__col md:col--4 lg:col--6"&gt;<br>
 											<span class="indent--2x"></span><em>content...</em><br>
+											<span class="highlight">
+												<span class="indent--2x"></span>&lt;div class="grid__row"&gt;<br>
+													<span class="indent--3x"></span>&lt;div class="grid__col md:col--4 lg:col--6"&gt;<br>
+														<span class="indent--4x"></span><em>content...</em><br>
+													<span class="indent--3x"></span>&lt;/div&gt;<br>
+													<span class="indent--3x"></span>&lt;div class="grid__col md:col--4 lg:col--6"&gt;<br>
+														<span class="indent--4x"></span><em>content...</em><br>
+													<span class="indent--3x"></span>&lt;/div&gt;<br>
+												<span class="indent--2x"></span>&lt;/div&gt;<br>
+											</span>
 										<span class="indent"></span>&lt;/div&gt;<br>
-										<span class="indent"></span>&lt;div class="grid__col md:col--2  lg:col--5"&gt;<br>
+										<span class="indent"></span>&lt;div class="grid__col md:col--4 lg:col--6"&gt;<br>
 											<span class="indent--2x"></span><em>content...</em><br>
 										<span class="indent"></span>&lt;/div&gt;<br>
 									&lt;/div&gt; <br>
@@ -765,6 +775,26 @@
 					</div>
 				</div>
 
+			</div>	<!-- /grid -->
+		</section>
+
+		<!-- ==================== -->
+		<!-- REORDERING/REVERSING -->
+		<!-- ==================== -->
+
+		<section id="reordering">
+			<div class="grid">
+				<div class="grid__row">
+					<div class="grid__col md:col--6 md:offset--1 lg:col--8 lg:offset--2">
+						<h3 class="section-title">Column Reordering</h3>
+						<p>There are two methods for controlling the reordering of columns.
+							<ul>
+								<li><strong>1)</strong> Auto Columns</li>
+								<li><strong>2)</strong> Responsive Columns</li>
+							</ul>
+						</p>
+					</div>
+				</div> <!-- /grid__row -->
 			</div>	<!-- /grid -->
 		</section>
 
@@ -782,38 +812,6 @@
 				</div> <!-- /grid__row -->
 			</div>	<!-- /grid -->
 		</section>
-
-		<!-- ==================== -->
-		<!-- REORDERING/REVERSING -->
-		<!-- ==================== -->
-
-		<section id="reordering">
-			<div class="grid">
-				<div class="grid__row">
-					<div class="grid__col md:col--6 md:offset--1 lg:col--8 lg:offset--2">
-						<h3 class="section-title">Column Ordering</h3>
-						<p>Coming soon...</p>
-					</div>
-				</div> <!-- /grid__row -->
-			</div>	<!-- /grid -->
-		</section>
-
-		<!-- ================= -->
-		<!-- REVERSING -->
-		<!-- ================= -->
-
-		<section id="reversing">
-			<div class="grid">
-				<div class="grid__row">
-					<div class="grid__col md:col--6 md:offset--1 lg:col--8 lg:offset--2">
-						<h3 class="section-title">Reversing</h3>
-						<p>Coming soon...</p>
-					</div>
-				</div> <!-- /grid__row -->
-			</div>	<!-- /grid -->
-		</section>
-
-		
 
 
 		<script async defer src="https://buttons.github.io/buttons.js"></script>
