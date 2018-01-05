@@ -2,6 +2,7 @@
 	height:	100vh;
 	max-height: 100vh;
 	background: $color--char-1;
+	 position: relative;
 	// color: $color--white;
 
     box-shadow: inset 0 0 50px 0px rgba(0,0,0,.35);
@@ -9,6 +10,7 @@
     @include flex-container;
     flex-direction: row;
 }
+
 .hero-content {
     text-align: center;
     align-self: center;
@@ -18,6 +20,7 @@
     .hero__symbol {
     	width: 6rem;
     }
+
     .hero__title {
 	    margin: 1rem 0 2rem;
 	    color: #ffffff;
@@ -65,19 +68,33 @@
 	    	font-weight: 400;
 	    }
     }
+
     .hero__descrip {
     	margin: 0;
-    	color: $color--steel-1;
+    	color: $color--steel-2;
     	font-family: 'Merriweather', serif;
     	font-size: 1.125rem;
 	    font-family: "Consolas", monospace;
     }
-    .hero__actions {
-    	margin-top: 2rem;
 
-    	.btn-wrap {
-    		display: inline-block;
-    		margin-right: .25rem;
-    	}
-    }
+    // .hero__actions {
+    // 	margin-top: 2rem;
+
+    // 	.btn-wrap {
+    // 		display: inline-block;
+    // 		margin-right: .25rem;
+    // 	}
+    // }
+
+}
+
+.hero__git-cta svg {
+	fill: $color--char-1;
+	position: absolute; 
+	top: 0; 
+	right: 0;
+
+	.corner-bg {
+		fill: $color--primary;
+	}
 }

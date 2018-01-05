@@ -51,13 +51,33 @@ strong.highlight {
 	// padding-top: 1rem;
 	// padding-bottom: 1rem;
 
-	.grid__row {
-		margin-top: 1rem;
+	@include grid(sm) {
 		margin-bottom: 0;
+	}
+
+	.grid__row {
+		// margin-top: 1rem;
+		margin-bottom: 0;
+
+		@include grid(md) {
+			margin-top: 1rem;
+		}
+
+		@include grid(lg) {
+			margin-top: 1rem;
+		}
+
 	}
 }
 
-.grid__col:not(:first-of-type) {
+// .grid__col:not(:first-of-type) {
+
+// 	@include grid(sm) {
+// 		margin-top: 1rem;
+// 	}
+// }
+
+.grid__col {
 
 	@include grid(sm) {
 		margin-top: 1rem;

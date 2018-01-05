@@ -26,20 +26,14 @@
 }
 
 .grid__row { 
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
 	@include gutter-compensation;
 	@include flex-container;
+
+	// flex-direction: row;
+	flex-direction: column;
+	flex-wrap: wrap;
 }
 
 .grid__col {
 	@include flex-column;
 }
-
-// experimental
-// .grid__row--vert { 
-// 	-webkit-flex-flow: column wrap;
-// 	flex-flow: column wrap;
-// 	@include gutter-compensation;
-// 	@include flex-container;
-// }

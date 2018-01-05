@@ -3,7 +3,12 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Spyder—A typograpahy based fluid CSS grid system</title>
+		<title>Spyder—A fluid, adaptable, and customizable Sass(.scss) grid-system based on flexbox</title>
+		<!-- favicons -->
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 		<!-- insert Google web fonts link here -->
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,900|Titillium+Web:600,900" rel="stylesheet">
 		
@@ -14,6 +19,14 @@
 
 		<header class="hero">
 			<div class="hero-content">
+				<a href="https://github.com/joshsanders/spyder" target="_blank" class="hero__git-cta">
+					<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 250 250">
+						<path class="corner-bg" d="M0 0l115 115h15l12 27 108 108V0z"/>
+					  	<path class="octo-arm" d="M128 109c-15-9-9-19-9-19 3-7 2-11 2-11-1-7 3-2 3-2 4 5 2 11 2 11-3 10 5 15 9 16" style="-webkit-transform-origin: 130px 106px; transform-origin: 130px 106px"/>
+					  	<path class="octo-body" d="M115 115s4 2 5 0l14-14c3-2 6-3 8-3-8-11-15-24 2-41 5-5 10-7 16-7 1-2 3-7 12-11 0 0 5 3 7 16 4 2 8 5 12 9s7 8 9 12c14 3 17 7 17 7-4 8-9 11-11 11 0 6-2 11-7 16-16 16-30 10-41 2 0 3-1 7-5 11l-12 11c-1 1 1 5 1 5z"/>
+					</svg>
+				</a> 
+
 				<object class="hero__symbol" type="image/svg+xml" data="img/hero__symbol--opt.svg"></object>
 				<h2 class="hero__title">Spyd
 					<span class="letter-e">
@@ -23,13 +36,13 @@
 					</span>
 					r
 				</h2>
-				<h4 class="hero__descrip">A customizable, fluid CSS grid system for creating responsive layouts</h4>
+				<h4 class="hero__descrip">A fluid, adaptable Sass(.scss) grid-system based on flexbox</h4>
 				
-				<div class="hero__actions"> 
+				<!-- <div class="hero__actions"> 
 					<div class="btn-wrap">
 						<a class="github-button" href="https://github.com/joshsanders/spyder/fork" data-size="large" aria-label="Fork joshsanders/spyder on GitHub">View on Github</a>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</header>
 
@@ -72,7 +85,7 @@
 				<div class="grid__row">
 					<div class="grid__col md:col--6 md:offset--1 lg:col--8 lg:offset--2">
 						<h3 class="section-title">Fluid &amp; Customizable</h3>
-						<p>To offer a truly responsive grid system that can adapt to any device, layout, or individual settings(zoom), spyder is built using REMs(default base = 16px) instead of pixels. This, combined with css flex properties and percentage widths, allow for fluid resizing of the grid and the content it contains.</p>
+						<p>To offer a truly responsive grid system that can adapt to any device, layout, or individual settings(zoom), spyder is built using REMs(default base = 16px) instead of pixels. This, combined with css flex properties and percentage widths, allows for fluid resizing of the grid and the content it contains.</p>
 
 						<!-- <p class="callout"><strong class="highlight">NOTE:</strong> There is an advanced syntax which allows the grid elements to adapt at different screen sizes. Further explanation can be found in the <a href="#columns">Columns &amp; Syntax</a> section below.</p>
 
@@ -256,7 +269,7 @@
 								</table>
 							</p>
 
-							<p class="callout"><strong class="highlight">NOTE: </strong>In the example below, you'll notice that the md:col and lg:col are written in two slightly different ways. You can append the '_$total' to the end of the modifier if you prefer. Spyder accepts either syntax&mdash;the longhand way just offers an easy reminder of how many total columns are allowed in each range.</p>
+							<p class="callout"><strong class="highlight">NOTE: </strong>In the example below, you'll notice that the md:col and lg:col are written in two slightly different ways. You can append the <strong>'_$total'</strong> to the end of the modifier if you prefer. Spyder accepts either syntax&mdash;the longhand way just offers an easy reminder of how many total columns are allowed in each range.</p>
 
 							<p>
 								<div class="code-wrap code-wrap--html">
@@ -620,8 +633,6 @@
 		<!-- OFFSETS -->
 		<!-- ================= -->
 
-		<!-- need to build these out in order to start using this in production -->
-
 		<section id="offsets">
 			<div class="grid">
 				<div class="grid__row">
@@ -629,6 +640,8 @@
 						<h3 class="section-title">Offsetting Columns</h3>
 						<p>Another commonly used modifier for columns are 'offsets'. Offsetting columns can be useful when you need extra white-space between content, or when you want a column to start inward from the beginning of a row.</p>
 						<p>The modifier syntax for offsets is the same as columns, except for the change in modifier from 'col' to 'offset':<code class="code--inline">[$range]:offset--[$val]</code>. The value of an offset is equal to its column counterpart, so lg:offset--2 would move a column to the right by the width of 2 columns at the lg grid-range.</p>
+
+						<p class="callout"><strong class="highlight">NOTE:</strong> There are no 'offset' modifiers for the <strong>grid(sm)</strong> grid-range due to <strong>.grid__col</strong> elements adapting to 100% full-width columns.</p>
 					</div>
 				</div> <!-- /grid__row -->
 
@@ -644,7 +657,7 @@
 					<div class="grid__col md:col--2 md:offset--2 lg:col--5 lg:offset--2">
 						<div class="content">
 							<span class="md:is-hidden lg:is-hidden">.grid__col</span>
-							<span class="sm:is-hidden lg:is-hidden">.md:col--2 .md:offset--4</span>
+							<span class="sm:is-hidden lg:is-hidden">.md:col--2 .md:offset--2</span>
 							<span class="sm:is-hidden md:is-hidden">.lg:col--5 .lg:offset--2</span>
 						</div>
 					</div>
@@ -786,20 +799,110 @@
 			<div class="grid">
 				<div class="grid__row">
 					<div class="grid__col md:col--6 md:offset--1 lg:col--8 lg:offset--2">
-						<h3 class="section-title">Column Reordering</h3>
-						<p>There are two methods for controlling the reordering of columns.
+						<h3 class="section-title">Reordering</h3>
+						<!-- <p>There are two methods for controlling the reordering of columns.
 							<ul>
-								<li><strong>1)</strong> Auto Columns</li>
-								<li><strong>2)</strong> Responsive Columns</li>
+								<li><strong>1) </strong>Reversing entire rows</li>
+								<li><strong>2) </strong>Reordering columns on an individual level</li>
 							</ul>
 						</p>
+
+						<h4><strong>Reversing Entire Rows</strong></h4> -->
+
+						<p>To reverse the order of entire rows, simply add the modifier <code class="code--inline">[$range]:row-reverse</code> to the desired <code class="code--inline">.grid__row</code>. The example below shows a row that has its order reversed at the <strong>grid(sm)</strong> and <strong>grid(lg)</strong> ranges while maintaining the original source order at the <strong>grid(md)</strong> range.</p>
 					</div>
 				</div> <!-- /grid__row -->
+
+				<div class="grid__row sm:row-reverse lg:row-reverse">
+					<div class="grid__col md:col--2 lg:col--3">
+						<div class="content">
+							<span>1st in source order</span>
+						</div>
+					</div>
+
+					<div class="grid__col md:col--2 lg:col--3">
+						<div class="content">
+							<span>2nd in source order</span>
+						</div>
+					</div>
+
+					<div class="grid__col md:col--2 lg:col--3">
+						<div class="content">
+							<span>3rd in source order</span>
+						</div>
+					</div>
+
+					<div class="grid__col md:col--2 lg:col--3">
+						<div class="content">
+							<span>4th in source order</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="grid__row">
+					<div class="grid__col md:col--6 md:offset--1 lg:col--8 lg:offset--2">
+						<p>
+							<div class="code-wrap code-wrap--html">
+								<code>
+									&lt;div class="grid__row <span class="highlight">sm:row-reverse lg:row-reverse</span>"&gt;<br>
+										<span class="indent">&lt;div class="grid__col md:col--2 lg:col--3"&gt;<br>
+											<span class="indent--2x"></span><em>1st in source order</em><br>
+										<span class="indent"></span>&lt;/div&gt;<br>
+										<span class="indent"></span>&lt;div class="grid__col md:col--2 lg:col--3"&gt;<br>
+											<span class="indent--2x"></span><em>2nd in source order</em><br>
+										<span class="indent"></span>&lt;/div&gt;<br>
+										<span class="indent">&lt;div class="grid__col md:col--2 lg:col--3"&gt;<br>
+											<span class="indent--2x"></span><em>3rd in source order</em><br>
+										<span class="indent"></span>&lt;/div&gt;<br>
+										<span class="indent"></span>&lt;div class="grid__col md:col--2 lg:col--3"&gt;<br>
+											<span class="indent--2x"></span><em>4th in source order</em><br>
+										<span class="indent"></span>&lt;/div&gt;<br>
+									&lt;/div&gt; <br>
+								</code>
+							</div>
+						</p>
+					</div>
+				</div>
+
+				<!-- <div class="grid__row">
+					<div class="grid__col md:col--6 md:offset--1 lg:col--8 lg:offset--2">
+						<h4><strong>Reordering Individual Columns</strong></h4>
+
+						<p>When it comes to reordering individual columns,</p>
+					</div>
+				</div> 
+
+				<div class="grid__row">
+					<div class="grid__col md:col--2 lg:col--3">
+						<div class="content">
+							<span>1st in source order</span>
+						</div>
+					</div>
+
+					<div class="grid__col md:col--2 lg:col--3">
+						<div class="content">
+							<span>2nd in source order</span>
+						</div>
+					</div>
+
+					<div class="grid__col md:col--2 lg:col--3">
+						<div class="content">
+							<span>3rd in source order</span>
+						</div>
+					</div>
+
+					<div class="grid__col md:col--2 lg:col--3">
+						<div class="content">
+							<span>4th in source order</span>
+						</div>
+					</div>
+				</div>  -->
+
 			</div>	<!-- /grid -->
 		</section>
 
 		<!-- ================= -->
-		<!-- ALIGNMENT -->
+		<!-- ALIGNMENT 		   -->
 		<!-- ================= -->
 
 		<section id="alignment">
@@ -810,6 +913,10 @@
 						<p>Coming soon...</p>
 					</div>
 				</div> <!-- /grid__row -->
+
+				<div class="grid__row">
+
+				</div>
 			</div>	<!-- /grid -->
 		</section>
 
