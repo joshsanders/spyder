@@ -36,13 +36,7 @@
 					</span>
 					r
 				</h2>
-				<h4 class="hero__descrip">A fluid, adaptable Sass(.scss) grid-system based on flexbox</h4>
-				
-				<!-- <div class="hero__actions"> 
-					<div class="btn-wrap">
-						<a class="github-button" href="https://github.com/joshsanders/spyder/fork" data-size="large" aria-label="Fork joshsanders/spyder on GitHub">View on Github</a>
-					</div>
-				</div> -->
+				<h4 class="hero__descrip">A fluid, adaptable Sass(.scss) grid-system</h4>
 			</div>
 		</header>
 
@@ -733,17 +727,17 @@
 							<div class="grid__row">
 								<div class="grid__col md:col--4 lg:col--6">
 									<div class="content nested">
-										<span class="md:is-hidden lg:is-hidden">nested .grid__col</span>
-										<span class="sm:is-hidden lg:is-hidden">nested .md:col--4</span>
-										<span class="sm:is-hidden md:is-hidden">nested .lg:col--6</span>
+										<span class="md:is-hidden lg:is-hidden">.grid__col (nested)</span>
+										<span class="sm:is-hidden lg:is-hidden">.md:col--4 (nested)</span>
+										<span class="sm:is-hidden md:is-hidden">.lg:col--6 (nested)</span>
 									</div>
 								</div>
 
 								<div class="grid__col md:col--4 lg:col--6">
 									<div class="content nested">
-										<span class="md:is-hidden lg:is-hidden">nested .grid__col</span>
-										<span class="sm:is-hidden lg:is-hidden">nested .md:col--4</span>
-										<span class="sm:is-hidden md:is-hidden">nested .lg:col--6</span>
+										<span class="md:is-hidden lg:is-hidden">.grid__col (nested)</span>
+										<span class="sm:is-hidden lg:is-hidden">.md:col--4 (nested)</span>
+										<span class="sm:is-hidden md:is-hidden">.lg:col--6 (nested)</span>
 									</div>
 								</div>
 							</div>
@@ -909,19 +903,196 @@
 			<div class="grid">
 				<div class="grid__row">
 					<div class="grid__col md:col--6 md:offset--1 lg:col--8 lg:offset--2">
-						<h3 class="section-title">Alignment Overrides</h3>
-						<p>Coming soon...</p>
+						<h3 class="section-title">Adjusting Alignment</h3>
+
+						<p>There are two methods for adjusting the alignment of columns:
+							<ul>
+								<li><strong>1) </strong>Aligning all columns in a row</li>
+								<li><strong>2) </strong>Aligning indiviudal columns</li>
+							</ul>
+						</p>
 					</div>
 				</div> <!-- /grid__row -->
 
-				<div class="grid__row">
 
+				<!-- [1] - Align Entire Rows -->
+				<!-- *********************** -->
+				<div class="grid__row">
+					<div class="grid__col md:col--6 md:offset--1 lg:col--8 lg:offset--2">
+						<h4><strong>Aligning Entire Rows</strong> <code class="code--inline">[$range]:row-align--[$val]</code></h4>
+
+						<p>To align an entire row of columns, use the <strong>align</strong> modifier on the desired <code class="code--inline">.grid__row</code> element. By default, columns are aligned to the top of a row.</p>
+						<br>
+						<br>
+						<p><strong>Top:</strong> <code class="code--inline">[$range]:row-align--top</code></p>
+						<hr>
+					</div>
+				</div>
+
+				<!-- Align top -->
+				<!-- EXAMPLE -->
+				<div class="grid__row md:row-align--top lg:row-align--top">
+					<div class="grid__col md:col--2 lg:col--4">
+						<div class="content">
+							<span>A column with a little bit of content.</span>
+						</div>
+					</div>
+
+					<div class="grid__col md:col--4 lg:col--4">
+						<div class="content">
+							<span>This column has quite a bit more content than the other columns.</span><br><br>
+							<span>In fact, this columns has multiple blocks of content, making for one long column.</span><br><br>
+							<span>One more sentence for good measure.</span>
+						</div>
+					</div>
+
+					<div class="grid__col md:col--2 lg:col--4">
+						<div class="content">
+							<span>A column with a little bit of content.</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Align Center -->
+				<div class="grid__row">
+					<div class="grid__col md:col--6 md:offset--1 lg:col--8 lg:offset--2">
+						<br>
+						<br>
+						<p><strong>Center:</strong> <code class="code--inline">[$range]:row-align--center</code></p>
+						<hr>
+					</div>
+				</div>
+
+				<!-- EXAMPLE -->
+				<div class="grid__row md:row-align--center lg:row-align--center">
+					<div class="grid__col md:col--2 lg:col--4">
+						<div class="content">
+							<span>A column with a little bit of content.</span>
+						</div>
+					</div>
+
+					<div class="grid__col md:col--4 lg:col--4">
+						<div class="content">
+							<span>This column has quite a bit more content than the other columns.</span><br><br>
+							<span>In fact, this columns has multiple blocks of content, making for one long column.</span><br><br>
+							<span>One more sentence for good measure.</span>
+						</div>
+					</div>
+
+					<div class="grid__col md:col--2 lg:col--4">
+						<div class="content">
+							<span>A column with a little bit of content.</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Align Bottom -->
+				<div class="grid__row">
+					<div class="grid__col md:col--6 md:offset--1 lg:col--8 lg:offset--2">
+						<br>
+						<br>
+						<p><strong>Bottom:</strong> <code class="code--inline">[$range]:row-align--bottom</code></p>
+						<hr>
+					</div>
+				</div>
+
+				<!-- EXAMPLE -->
+				<div class="grid__row md:row-align--bottom lg:row-align--bottom">
+					<div class="grid__col md:col--2 lg:col--4">
+						<div class="content">
+							<span>A column with a little bit of content.</span>
+						</div>
+					</div>
+
+					<div class="grid__col md:col--4 lg:col--4">
+						<div class="content">
+							<span>This column has quite a bit more content than the other columns.</span><br><br>
+							<span>In fact, this columns has multiple blocks of content, making for one long column.</span><br><br>
+							<span>One more sentence for good measure.</span>
+						</div>
+					</div>
+
+					<div class="grid__col md:col--2 lg:col--4">
+						<div class="content">
+							<span>A column with a little bit of content.</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="grid__row">
+					<div class="grid__col md:col--6 md:offset--1 lg:col--8 lg:offset--2">
+						<p>
+							<div class="code-wrap code-wrap--html">
+								<code>
+									&lt;div class="grid__row <span class="highlight">md:row-align--top lg:row-align--top</span>"&gt;<br>
+										<span class="indent"></span>&lt;div class="grid__col md:col--2 lg:col--4"&gt;...&lt;/div&gt;<br>
+										<span class="indent"></span>&lt;div class="grid__col md:col--4 lg:col--4"&gt;...&lt;/div&gt;<br>
+										<span class="indent"></span>&lt;div class="grid__col md:col--2 lg:col--4"&gt;...&lt;/div&gt;<br>
+									&lt;/div&gt;<br>
+
+									&lt;div class="grid__row <span class="highlight">md:row-align--center lg:row-align--center</span>"&gt;<br>
+										<span class="indent"></span>&lt;div class="grid__col md:col--2 lg:col--4"&gt;...&lt;/div&gt;<br>
+										<span class="indent"></span>&lt;div class="grid__col md:col--4 lg:col--4"&gt;...&lt;/div&gt;<br>
+										<span class="indent"></span>&lt;div class="grid__col md:col--2 lg:col--4"&gt;...&lt;/div&gt;<br>
+									&lt;/div&gt;<br>
+
+									&lt;div class="grid__row <span class="highlight">md:row-align--bottom lg:row-align--bottom</span>"&gt;<br>
+										<span class="indent"></span>&lt;div class="grid__col md:col--2 lg:col--4"&gt;...&lt;/div&gt;<br>
+										<span class="indent"></span>&lt;div class="grid__col md:col--4 lg:col--4"&gt;...&lt;/div&gt;<br>
+										<span class="indent"></span>&lt;div class="grid__col md:col--2 lg:col--4"&gt;...&lt;/div&gt;<br>
+									&lt;/div&gt;<br>
+								</code>
+							</div>
+						</p>
+					</div>
+				</div>
+
+
+				<!-- [2] - Individual Columns -->
+				<!-- ************************ -->
+				<div class="grid__row">
+					<div class="grid__col md:col--6 md:offset--1 lg:col--8 lg:offset--2">
+						<h4><strong>Aligning Individual Columns</strong> <code class="code--inline">[$range]:col-align--[$val]</code></h4>
+
+						<p>To adjust alignment of indiviudal columns, use the <strong>col-align</strong> modifier on the desired <code class="code--inline">.grid__col</code> element. By default, columns are aligned to the top of a row.</p>
+					</div>	
+				</div>
+
+				<!-- EXAMPLE -->
+				<div class="grid__row">
+					<div class="grid__col md:col--2 lg:col--3">
+						<div class="content">
+							<span class="lg:is-hidden">.md:col-align--top (Default)</span>
+							<span class="md:is-hidden">.lg:col-align--top (Default)</span>
+						</div>
+					</div>
+
+					<div class="grid__col md:col--2 md:col-align--center lg:col--3 lg:col-align--center">
+						<div class="content">
+							<span class="lg:is-hidden">.md:col-align--center</span>
+							<span class="md:is-hidden">.lg:col-align--center</span>
+						</div> 
+					</div>
+
+					<div class="grid__col md:col--2 lg:col--3">
+						<div class="content">
+							<span>This column has quite a bit more content than the other columns.</span><br><br>
+							<span>In fact, this columns has multiple blocks of content, making for one long column.</span><br><br>
+							<span>One more sentence for good measure.</span>
+						</div>
+					</div>
+
+					<div class="grid__col md:col--2 md:col-align--bottom lg:col--3 lg:col-align--bottom">
+						<div class="content">
+							<span class="lg:is-hidden">.md:col-align--bottom</span>
+							<span class="md:is-hidden">.lg:col-align--bottom</span>
+						</div>
+					</div>
 				</div>
 			</div>	<!-- /grid -->
 		</section>
 
 
-		<script async defer src="https://buttons.github.io/buttons.js"></script>
 		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="js/script.min.js"></script>
 	</body>
