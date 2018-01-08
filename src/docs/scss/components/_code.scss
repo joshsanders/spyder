@@ -8,7 +8,7 @@
     font-size: .875rem;
     white-space: nowrap;
 }
-.code-wrap {
+.code__block {
 	border-radius: 2px;
 	display: block;
     position: relative;
@@ -31,6 +31,8 @@
 		border-top-right-radius: 2px;
 		border-left: 1px solid #c0c0c9;
 		border-bottom: 1px solid #c0c0c9;
+		background: rgba(255, 255, 255, 0.75);
+		z-index: 2;
 	}
 
   	&--html:before {
@@ -41,7 +43,15 @@
 		content: "CSS";
 	}
 
-	code {
+	.code__pre {
+		overflow-x: auto;
+	    -ms-word-wrap: normal;
+	    word-wrap: normal;
+	    overflow-wrap: normal;
+	    white-space: nowrap;
+	}
+
+	.code {
 		font-family: $font-family--mono;
 		font-size: .875rem;
 	}
