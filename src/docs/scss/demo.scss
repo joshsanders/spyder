@@ -4,7 +4,7 @@
 // @import "config/media-queries"; /* MQs go here??? */
 
 // VENDOR
-@import "../../../dist/spyder-3.0/spyder-3.0";
+@import "../../../dist/spyder-1.0/spyder-1.0";
 
 // BASE
 @import "base/reset";
@@ -13,7 +13,6 @@
 
 // LAYOUT
 @import	"layout/hero";
-// @import "layout/grid"; /* currently linked in <head> of demo.html as external spyder-3.0.css */
 // @import "layout/header";
 // @import "layout/footer";
 

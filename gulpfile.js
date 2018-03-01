@@ -9,8 +9,25 @@ var gulp = require('gulp'),
 
 
 // vars to handle SCSS/CSS pathing
-// var SCSS_SRC = 'scss/**/*.scss',
-// 	SCSS_DEST = 'dist/css';
+var 
+
+	// src_scss = './src/scss/**/*.scss',
+
+	proj_src_scss = './src/build/**/*.scss',
+	proj_dist_scss = './dist/spyder-1.0/',
+
+	docs_src_scss = './src/docs/scss/**/*.scss',
+	docs_dist_css = './docs/css/',
+	docs_src_js = './src/docs/js/**/*.js',
+	docs_dist_js = './docs/js/',
+	docs_src_html = './src/docs/*.html',
+	docs_dist_html = './docs/';
+
+	// docs_src_js = './src/docs/js/**/*.js',
+	// docs_dist_js = './docs/js',
+	// docs_src_html = './src/docs/*.html',
+	// docs_dist_html = './docs/',
+// 	all_html = './src/**/*.html';
 
 
 
@@ -37,23 +54,23 @@ gulp.task('serve', function(){
 // [2] - styles task for src/docs -> docs
 
 // [1]
-gulp.task('st-build', function(){
+gulp.task('proj-build', function(){
 	
-	return gulp.src('./src/build/**/*.scss')
-		.pipe(gulp.dest('./dist/spyder-3.0/'))
+	return gulp.src( proj_src_scss )
+		.pipe(gulp.dest( proj_dist_scss ))
 		.pipe(browserSync.stream());
 });
 
 // [2] 
-gulp.task('styles', function(){
+gulp.task('docs-styles', function(){
 	
-	return gulp.src('./src/docs/scss/**/*.scss')
+	return gulp.src( docs_src_scss )
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer())
 		.pipe(cleanCSS())
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('./docs/css'))
+		.pipe(gulp.dest( docs_dist_css ))
 		.pipe(browserSync.stream());
 
 });
@@ -63,12 +80,12 @@ gulp.task('styles', function(){
 // ---
 // Minifies src js files and sends them to desired destination folder 
 
-gulp.task('scripts', function(){
+gulp.task('docs-scripts', function(){
 
-	return gulp.src('./src/docs/js/*.js')
+	return gulp.src( docs_src_js )
 		.pipe(sourcemaps.init())
 		.pipe(uglify())
-		.pipe(gulp.dest('./docs/js'))
+		.pipe(gulp.dest( docs_dist_js ))
 		.pipe(browserSync.stream());
 
 });
@@ -78,12 +95,12 @@ gulp.task('scripts', function(){
 // ---
 // watches directory for changes of desired files
 
-gulp.task('html', function() {
-  return gulp.src('./src/docs/*.html')
+gulp.task('docs-html', function() {
+  return gulp.src( docs_src_html )
     // .pipe(htmlMin({
     // 	collapseWhitespace: true
     // }))
-    .pipe(gulp.dest('./docs/'))
+    .pipe(gulp.dest( docs_dist_html ))
     .pipe(browserSync.stream());
 });
 
@@ -94,10 +111,11 @@ gulp.task('html', function() {
 
 gulp.task('watch', function(){
 
-	gulp.watch('./src/**/*.scss', ['st-build']);
-	gulp.watch('./src/**/*.scss', ['styles']);
-	gulp.watch('./src/**/*.js', ['scripts']);
-	gulp.watch('./src/docs/*.html', ['html']).on('change', browserSync.reload);
+	gulp.watch( proj_src_scss, ['proj-build']);
+
+	gulp.watch( docs_src_scss, ['docs-styles']);
+	gulp.watch( docs_src_js, ['docs-scripts']);
+	gulp.watch( docs_src_html, ['docs-html']).on('change', browserSync.reload);
 
 });
 
