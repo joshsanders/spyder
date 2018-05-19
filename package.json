@@ -8,13 +8,13 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^3.9.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean-css": "^3.9.4",
     "gulp-htmlmin": "^3.0.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0"
   },
   "scripts": {
